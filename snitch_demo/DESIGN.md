@@ -1,53 +1,29 @@
 ---
 name: Obsidian & Ether
 colors:
-  surface: '#0b1326'
-  surface-dim: '#0b1326'
-  surface-bright: '#31394d'
-  surface-container-lowest: '#060e20'
-  surface-container-low: '#131b2e'
-  surface-container: '#171f33'
-  surface-container-high: '#222a3d'
-  surface-container-highest: '#2d3449'
-  on-surface: '#dae2fd'
-  on-surface-variant: '#ccc3d8'
-  inverse-surface: '#dae2fd'
-  inverse-on-surface: '#283044'
-  outline: '#958da1'
-  outline-variant: '#4a4455'
-  surface-tint: '#d2bbff'
-  primary: '#d2bbff'
-  on-primary: '#3f008e'
-  primary-container: '#7c3aed'
-  on-primary-container: '#ede0ff'
-  inverse-primary: '#732ee4'
-  secondary: '#c4c7c9'
-  on-secondary: '#2d3133'
-  secondary-container: '#464a4b'
-  on-secondary-container: '#b6b9bb'
-  tertiary: '#bcc7de'
-  on-tertiary: '#263143'
-  tertiary-container: '#5c677c'
-  on-tertiary-container: '#dbe6fe'
-  error: '#ffb4ab'
-  on-error: '#690005'
-  error-container: '#93000a'
-  on-error-container: '#ffdad6'
-  primary-fixed: '#eaddff'
-  primary-fixed-dim: '#d2bbff'
-  on-primary-fixed: '#25005a'
-  on-primary-fixed-variant: '#5a00c6'
-  secondary-fixed: '#e0e3e5'
-  secondary-fixed-dim: '#c4c7c9'
-  on-secondary-fixed: '#191c1e'
-  on-secondary-fixed-variant: '#444749'
-  tertiary-fixed: '#d8e3fb'
-  tertiary-fixed-dim: '#bcc7de'
-  on-tertiary-fixed: '#111c2d'
-  on-tertiary-fixed-variant: '#3c475a'
-  background: '#0b1326'
-  on-background: '#dae2fd'
-  surface-variant: '#2d3449'
+  background: '#0F172A'
+  surface: '#162033'
+  surface-dim: '#0F172A'
+  surface-bright: '#1D2940'
+  surface-container-lowest: '#0F172A'
+  surface-container-low: '#162033'
+  surface-container: '#162033'
+  surface-container-high: '#1D2940'
+  surface-container-highest: '#1D2940'
+  surface-variant: '#162033'
+  on-background: '#FFFFFF'
+  on-background-emphasis: '#FFFFFF'
+  on-surface: '#FFFFFF'
+  on-surface-variant: '#FFFFFF'
+  outline: '#2B3A55'
+  outline-variant: '#405173'
+  primary: '#A78BFA'
+  primary-container: '#C4B5FD'
+  on-primary: '#F8FAFC'
+  on-primary-container: '#F8FAFC'
+  secondary: '#CBD5E1'
+  tertiary: '#F1F5F9'
+  error: '#DC2626'
 typography:
   display-xl:
     fontFamily: Geist
@@ -137,7 +113,10 @@ The typography system follows an editorial rhythm. We pair **Geist** for headlin
 Key treatments:
 - **Tight Tracking:** Headlines use negative letter-spacing to create a "locked-in," impactful look.
 - **Generous Leading:** Body copy is given ample vertical breathing room to feel sophisticated and approachable.
-- **Hierarchy:** Contrast is achieved through weight and color (Secondary White vs. Slate Gray) rather than just size.
+- **Text Hierarchy:** Contrast is achieved through color stratification, not just size and weight:
+  - **Display/Headline Text** (`display-xl`, `display-lg`, `headline-md`, `headline-sm`): Use `on-background-emphasis` (#EDF1FC)—a crisp, near-white with high contrast for maximum visual impact.
+  - **Body/Paragraph Text** (`body-lg`, `body-md`): Use `on-background` (#dae2fd) or `on-surface-variant` (#ccc3d8) for secondary/de-emphasized content.
+  - **Interactive Elements** (buttons, links, accents): Use `primary` (#d2bbff) and `primary-container` (#7c3aed) unchanged.
 
 ## Layout & Spacing
 

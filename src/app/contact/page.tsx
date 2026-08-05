@@ -4,10 +4,10 @@ import { ContactForm } from "@/components/sections/contact-form";
 import { TechChip } from "@/components/ui/tech-chip";
 
 const focusAreas = ["AI Products", "Developer Tools", "SaaS", "Healthcare Tech", "Product Engineering", "Automation"];
-const socials: Array<{ label: string; icon: LucideIcon }> = [
-  { label: "LinkedIn", icon: Linkedin },
-  { label: "GitHub", icon: Github },
-  { label: "Resume", icon: FileText },
+const socials: Array<{ label: string; icon: LucideIcon; href: string }> = [
+  { label: "LinkedIn", icon: Linkedin, href: "https://in.linkedin.com/in/sriharshagade" },
+  { label: "GitHub", icon: Github, href: "https://github.com/sriharshagade" },
+  { label: "Resume", icon: FileText, href: "#" },
 ];
 
 export const metadata = { title: "Contact" };
@@ -18,7 +18,7 @@ export default function ContactPage() {
       <div className="grid gap-gutter md:grid-cols-12 md:gap-x-24">
         <section className="md:col-span-7">
           <header className="mb-12">
-            <h1 className="mb-6 font-geist text-display-xl-mobile text-on-surface md:text-display-xl">Let&apos;s build something meaningful.</h1>
+            <h1 className="mb-6 font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl">Let&apos;s build something meaningful.</h1>
             <p className="max-w-2xl text-body-lg text-on-surface-variant">Whether you&apos;re hiring an AI engineer, looking for a product builder, or want to discuss an idea, I&apos;d love to hear from you.</p>
           </header>
           <ContactForm />
@@ -44,7 +44,7 @@ export default function ContactPage() {
             <div className="flex gap-6">
               {socials.map((item) => {
                 const Icon = item.icon;
-                return <a className="flex flex-col items-center gap-1 text-on-surface-variant transition-colors hover:text-primary" href="#" key={item.label}><Icon className="size-5" /><span className="font-mono text-[10px]">{item.label}</span></a>;
+                return <a className="flex flex-col items-center gap-1 text-on-surface-variant transition-colors hover:text-primary" href={item.href} key={item.label}><Icon className="size-5" /><span className="font-mono text-[10px]">{item.label}</span></a>;
               })}
             </div>
           </section>

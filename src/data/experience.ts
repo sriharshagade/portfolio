@@ -1,17 +1,17 @@
 ﻿export const experience = [
   {
-    role: "AI Product Engineer",
-    period: "Current",
-    description: "Building AI-powered products from idea to production, with ownership across product thinking, frontend architecture, backend integration, and deployment.",
+    period: "Today",
+    role: "Bridging Business & AI",
+    description: "Work closely with stakeholders to understand customer challenges, validate AI solutions through rapid prototyping, and provide technical direction for engineering teams.",
   },
   {
-    role: "Full-stack Builder",
-    period: "Recent",
-    description: "Worked across React interfaces, APIs, database-backed workflows, automation, and AI-assisted user experiences.",
+    period: "Growth",
+    role: "Building Intelligent Software",
+    description: "Designed and developed AI-powered applications, backend services, and product experiences while expanding into product discovery and solution design.",
   },
   {
-    role: "Product-minded Engineer",
     period: "Foundation",
-    description: "Developed a bias for solving real user problems, making clear engineering tradeoffs, and shipping practical software.",
+    role: "Engineering Fundamentals",
+    description: "Built reliable software, strengthened system design skills, and developed a product-first mindset focused on solving real user problems.",
   },
 ];

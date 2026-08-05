@@ -19,21 +19,61 @@ html {
 
 body {
   min-height: 100vh;
-  background: #0b1326;
-  color: #dae2fd;
+  background: #0F172A;
+  color: #FFFFFF;
   font-family: var(--font-inter);
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: #7c3aed;
-  color: #ede0ff;
+  background: #A78BFA;
+  color: #0F172A;
+}
+
+/* Text hierarchy classes */
+.text-headline {
+  color: #FFFFFF;
+}
+
+.text-display {
+  color: #FFFFFF;
+}
+
+.text-body {
+  color: #FFFFFF;
+}
+
+/* Hero visual animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 5s ease-in-out infinite 0.5s;
 }
 
 .technical-grid {
   background-image:
-    linear-gradient(to right, rgb(74 68 85 / 0.12) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(74 68 85 / 0.12) 1px, transparent 1px);
+    linear-gradient(to right, rgb(43 58 85 / 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(43 58 85 / 0.12) 1px, transparent 1px);
   background-size: 40px 40px;
   mask-image: radial-gradient(ellipse at center, black 35%, transparent 78%);
 }

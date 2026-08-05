@@ -10,21 +10,20 @@ export default function HomePage() {
     <main>
       <Hero />
       <FeaturedProjects projects={projects} />
-      <section className="container border-t border-outline-variant/20 py-16 md:py-24">
-        <div className="grid gap-12 md:grid-cols-2">
+      <section className="container border-t border-outline-variant/20 pb-16 md:pb-24 pt-0">
+        <div className="grid gap-8 md:grid-cols-2 md:gap-16">
           <div>
-            <h2 className="mb-6 font-geist text-headline-md text-on-surface">About</h2>
-            <div className="space-y-4 text-body-md text-on-surface-variant">
-              <p>I build software that solves meaningful problems, with attention to the user experience, the engineering tradeoffs, and the operational path to production.</p>
-              <p>My work sits across AI, backend systems, frontend development, and product design. Every technical decision should ultimately make the product clearer, faster, or more useful.</p>
-              <Link className="inline-flex items-center gap-2 pt-4 font-mono text-sm text-primary underline underline-offset-4 transition-colors hover:text-on-surface" href="/about">
+            <h2 className="mb-6 font-geist text-headline-md text-on-background-emphasis">About</h2>
+            <div className="flex flex-col gap-4">
+              <p className="text-body-md leading-relaxed text-on-surface-variant">I bridge business problems and AI engineering. I partner with stakeholders to understand complex challenges, validate ideas through AI prototypes, and guide teams toward practical, scalable solutions. My role is to turn ambiguity into clear technical direction.</p>
+              <Link className="inline-flex items-center gap-2 font-mono text-sm text-primary underline underline-offset-4 transition-colors hover:text-on-surface" href="/about">
                 Read More <ArrowUpRight aria-hidden="true" className="size-4" />
               </Link>
             </div>
           </div>
-          <div className="flex items-center md:justify-end">
+          <div className="flex items-start md:justify-end">
             <Link className="group inline-flex items-center gap-4 text-on-surface transition-colors hover:text-primary" href="/contact">
-              <span className="font-geist text-display-lg md:text-[56px]">Get in touch</span>
+              <span className="font-geist text-display-lg text-on-background-emphasis md:text-[56px]">Get in touch</span>
               <ArrowUpRight aria-hidden="true" className="size-10 transition-transform group-hover:rotate-45" />
             </Link>
           </div>
