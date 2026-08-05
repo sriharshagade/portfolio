@@ -17,7 +17,7 @@ export default function AboutPage() {
                   I enjoy solving difficult business problems with AI.
                 </h1>
                 <p className="text-body-md leading-7 text-on-surface-variant">
-                  I work at the intersection of business and engineering. Most of my time is spent understanding messy, ambiguous problems from stakeholders, building rapid AI prototypes to test ideas, and helping teams understand what's technically feasible. I'm drawn to work where the biggest uncertainty isn't technical—it's whether the problem is worth solving.
+                  I work at the intersection of business and engineering. Most of my time is spent understanding messy, ambiguous problems from stakeholders, building rapid AI prototypes to test ideas, and helping teams understand what&apos;s technically feasible. I&apos;m drawn to work where the biggest uncertainty isn&apos;t technical—it&apos;s whether the problem is worth solving.
                 </p>
               </div>
               <p className="text-body-md leading-7 text-on-surface-variant">
@@ -29,7 +29,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="lg:col-span-5 flex items-start">
-              <div className="group relative aspect-[3/4] w-full overflow-hidden rounded-lg border border-outline-variant/50 bg-surface-container">
+              <div className="group relative aspect-[3/4] w-full max-h-[600px] md:max-h-none overflow-hidden rounded-lg border border-outline-variant/50 bg-surface-container">
                 <Image alt="Sriharsha Gade portrait" className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0" fill sizes="(min-width: 1024px) 34vw, 100vw" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmxjUW0qqhhtU7ITppe5YzM6RbK_igeUsRpxqZvi4KFdmFtlqhS0p7PLtDOEGYswKb3SLxhS1wjbzPY2eFJW_MUUVl_UGrmGnWPZVoEEDrzjaNmcI7VQBGNOZHV2nrFAio9o10bpX5cmnGqpG4sQjUoBmzpgmp9oB0JaXW02kuToxfKSwvNqoj5vslrqtMeUyOTh8IIDK57P-WyM_6oV8pRYJHBBs30BVOAAchMcYIkp4KzDUZgq2JoTwpuf80T9NLbGKem9DuShvQG-M" />
                 <span className="absolute bottom-4 right-4 rounded border border-outline-variant bg-surface/90 px-3 py-1 font-mono text-xs text-primary backdrop-blur">IMG_01</span>
               </div>
