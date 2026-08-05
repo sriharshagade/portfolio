@@ -1,0 +1,373 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>QuickCliniq Case Study | Visual Walkthrough</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#7c3aed",
+                        "on-tertiary-fixed": "#111c2d",
+                        "surface-container": "#171f33",
+                        "on-background": "#dae2fd",
+                        "surface-container-high": "#222a3d",
+                        "on-primary": "#3f008e",
+                        "on-tertiary-container": "#dbe6fe",
+                        "on-primary-container": "#ede0ff",
+                        "tertiary-fixed-dim": "#bcc7de",
+                        "inverse-surface": "#dae2fd",
+                        "error-container": "#93000a",
+                        "surface-bright": "#31394d",
+                        "outline-variant": "#4a4455",
+                        "primary": "#d2bbff",
+                        "surface-container-lowest": "#060e20",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "tertiary-container": "#5c677c",
+                        "surface-variant": "#2d3449",
+                        "on-primary-fixed": "#25005a",
+                        "primary-fixed": "#eaddff",
+                        "inverse-on-surface": "#283044",
+                        "surface": "#0b1326",
+                        "secondary-fixed-dim": "#c4c7c9",
+                        "tertiary-fixed": "#d8e3fb",
+                        "surface-tint": "#d2bbff",
+                        "on-tertiary-fixed-variant": "#3c475a",
+                        "secondary-container": "#464a4b",
+                        "inverse-primary": "#732ee4",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#c4c7c9",
+                        "primary-fixed-dim": "#d2bbff",
+                        "surface-container-low": "#131b2e",
+                        "on-secondary-fixed-variant": "#444749",
+                        "on-secondary-fixed": "#191c1e",
+                        "background": "#0b1326",
+                        "on-secondary-container": "#b6b9bb",
+                        "tertiary": "#bcc7de",
+                        "on-surface": "#dae2fd",
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#2d3449",
+                        "outline": "#958da1",
+                        "on-tertiary": "#263143",
+                        "secondary-fixed": "#e0e3e5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Geist"],
+                        "body-md": ["Inter"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-sm": ["Geist"],
+                        "display-xl": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "body-lg": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Geist', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(23, 31, 51, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(74, 68, 85, 0.5); }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30">
+<!-- Navigation (Shared Component Integration) -->
+<header class="fixed top-0 w-full z-50 border-b border-outline-variant bg-background/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="font-bold tracking-tight text-lg">QuickCliniq</span>
+</div>
+<nav class="hidden md:flex gap-8 text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#problem">Problem</a>
+<a class="hover:text-primary transition-colors" href="#solution">Solution</a>
+<a class="hover:text-primary transition-colors" href="#walkthrough">Walkthrough</a>
+<a class="hover:text-primary transition-colors" href="#architecture">Architecture</a>
+<a class="hover:text-primary transition-colors" href="#engineering">Engineering</a>
+</nav>
+<div class="flex gap-3">
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-bold">Demo</button>
+<button class="bg-surface-container-high text-on-surface px-4 py-2 rounded-lg text-sm font-bold">GitHub</button>
+</div>
+</div>
+</header>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col items-center justify-center px-6 py-20 overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
+<webgl-shader class="absolute inset-0 -z-10 opacity-30" src="{{DATA:ANIMATION:ANIMATION_1}}"></webgl-shader>
+<div class="max-w-6xl w-full text-center space-y-8">
+<div class="space-y-4">
+<h1 class="text-display-lg md:text-display-xl text-white">QuickCliniq</h1>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto">AI-driven patient management platform revolutionizing clinical workflows with automated scheduling and diagnostic assistance.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-3">
+<span class="px-3 py-1 bg-surface-container-high rounded text-label-mono border border-outline-variant">React</span>
+<span class="px-3 py-1 bg-surface-container-high rounded text-label-mono border border-outline-variant">Node.js</span>
+<span class="px-3 py-1 bg-surface-container-high rounded text-label-mono border border-outline-variant">PostgreSQL</span>
+<span class="px-3 py-1 bg-surface-container-high rounded text-label-mono border border-outline-variant">OpenAI API</span>
+<span class="px-3 py-1 bg-surface-container-high rounded text-label-mono border border-outline-variant">TailwindCSS</span>
+</div>
+<div class="relative w-full max-w-5xl aspect-[16/9] mx-auto rounded-xl overflow-hidden shadow-2xl border-4 border-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="A clean, high-fidelity user interface of a medical dashboard showing patient statistics, calendar appointments, and AI-generated diagnostic suggestions. The aesthetic is sophisticated with deep purple and slate backgrounds, vibrant violet accents, and glass-morphism effects. Large typography and clear icons provide a professional yet modern feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwzmQAlBs9ZvRp5KciuSNuWAPKsrlEptBOSfOQRgZAtFMyWOtDtqquNZxAfNzaOdRWmOUBxou_JCkNr8BgrPlVofHvaPG6XYYF7hI6gwsZtFCIeRVzF-r5axr3NHtZGW9Jysg_Xx9v-zrAak1dm8z1Pbw6DtvBCK_v7eruFi8LAaqxefRmgqm1vQx3v6zDcsOQ0EEceAYh0xssqFpIauHQK8vQpXZ3c8BTgknGWdCvO0v6j-IttUnGsg">
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center transition-all duration-1000 opacity-100 translate-y-0" id="problem">
+<div>
+<h2 class="text-headline-md mb-6">The Challenge</h2>
+<div class="space-y-4">
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low border border-outline-variant">
+<span class="material-symbols-outlined text-error" data-icon="error">error</span>
+<p class="text-body-md">Manual patient entry leads to critical data errors and fatigue.</p>
+</div>
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low border border-outline-variant">
+<span class="material-symbols-outlined text-error" data-icon="schedule">schedule</span>
+<p class="text-body-md">Inefficient scheduling causing 45-minute average wait times.</p>
+</div>
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low border border-outline-variant">
+<span class="material-symbols-outlined text-error" data-icon="hub">hub</span>
+<p class="text-body-md">Fragmented communication between departments and doctors.</p>
+</div>
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low border border-outline-variant">
+<span class="material-symbols-outlined text-error" data-icon="clinical_notes">clinical_notes</span>
+<p class="text-body-md">Lack of real-time diagnostic insights for immediate action.</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square rounded-xl overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Close up photography of a disorganized paper-based medical filing system in a dimly lit office. The scene feels chaotic and outdated, emphasizing the need for digital transformation. Muted tones and shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvMKIYOSgeUYs6Pc-sPrdrFZp6DNdVDNHa47xfA6tkqaPnFSIsTfx5n0L7-wbbGzzZAhmUC7vRide7dYg8VgCEdE6_1ArCruPeOvAk7p75Sjq2QxpHoOn8WxYiq6oMgN44vbsmBiW5FjCojjRnhEqAKe8ykx0tNA8T9j_A8lWP0NqyB7ZY184gd0VjPtJZ-rXgnQfgeh5dS3mp75NsIvtynlNj0hGmV0-MWOBByo1XUfR3B6pqQP50Cw">
+</div>
+<div class="aspect-square rounded-xl overflow-hidden border border-outline-variant mt-8">
+<img class="w-full h-full object-cover" data-alt="A blurry, fast-motion shot of a crowded hospital waiting room with tired patients looking at clocks. Cold fluorescent lighting highlights the stress and inefficiency of manual systems. Professional documentary style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrIPqZykcCHPDhV-Zd8c_aTFmBoh43Nzm48zqQFyCy-Sn3hA8oeWs2Um2_TMAKcbeL2NMJQ9FtD3QLKF_Xzip3HEW2Mvd1GEvhbYb7cYcZK5Q7JzWomW0xwaKRephMcFPFMScBxM7gqF8Lyj38dMNdXmNf2VK4qjfxOdnlHe8-IBm39_eCd68N3_KvaIj1pcSABRKxgkdcIg730MgS1roG4oottRlcZ000PAbL3BVsAGueLK8UcKJnOA">
+</div>
+</div>
+</section>
+<!-- Solution Visual Walkthrough -->
+<section class="py-24 bg-surface-container-lowest transition-all duration-1000 opacity-100 translate-y-0" id="solution">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-headline-md">The Unified Solution</h2>
+<p class="text-body-lg text-on-surface-variant">A seamless interface connecting patient data to AI intelligence.</p>
+</div>
+<div class="grid gap-12">
+<div class="relative group rounded-2xl overflow-hidden border border-outline-variant shadow-lg">
+<img class="w-full h-[600px] object-cover" data-alt="An expansive panoramic view of the QuickCliniq centralized dashboard. It displays a sleek real-time feed of patient intakes, a vibrant calendar grid, and interactive health trend charts. The UI uses a deep violet color palette with high-contrast data visualizations in cyan and magenta. Professional software presentation style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAjiv0ZOYfwUJL8rS2EEyY7CYolD9gGsEzm3NngVt_Uz8iJvgWuI7kknzsEvUduovaaTx71_gyycpTCODRhlwRXFmv8XlHGZI2VA2LKEluTyvAYTSZmA3aAi53FbX7PZ7rdFTEgL69cPAaLixTDH5Rr1tcaOICzEdLXjR4sp60iqaW1lEo3yhcImntBzaiVFoLE_Yg6rX7jKPLXqVFlDFjxKGCqpHje6aAj3NtCg0FmIzVFowOnTkKkA">
+<div class="absolute bottom-0 inset-x-0 p-8 bg-gradient-to-t from-background to-transparent">
+<h3 class="text-headline-sm text-white">Central Command</h3>
+<p class="text-on-surface-variant max-w-xl">Every patient touchpoint accessible through one reactive interface.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Massive Product Walkthrough -->
+<section class="py-24 space-y-24 transition-all duration-1000 opacity-100 translate-y-0" id="walkthrough">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-display-lg text-center mb-20">The Platform Experience</h2>
+<!-- Feature 1: AI Diagnostics -->
+<div class="grid md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-5 space-y-6">
+<div class="inline-flex px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30 text-label-mono">Feature 01</div>
+<h3 class="text-headline-md">AI-Assisted Diagnoses</h3>
+<p class="text-body-lg text-on-surface-variant">Real-time LLM integration scans patient symptoms against historical data to suggest potential risks before the doctor enters the room.</p>
+</div>
+<div class="md:col-span-7">
+<div class="glass-panel p-2 rounded-2xl">
+<img class="rounded-xl w-full border border-outline-variant" data-alt="A detailed view of an AI diagnosis interface within the QuickCliniq app. It shows a sidebar with natural language processing highlights of a patient's symptoms, and a main area displaying confidence scores and recommended next steps. The lighting is soft neon, focusing on the clarity of the text and the elegance of the UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_cZd2ARzUKgHYVOKmgM8dVlhyLpcXplWK9_7s9b1r1W3qmExRRnorg1ye6BujNC6bWN6hwnQ-01fRkPGDELz-NETbRTuwOH7uXgqmYvI3NX3PGsGrh4bKgTrwShA93Qioxlr6mLmo-m9ypjoGcw48DkXFXFm_tKH9Fi_u-kX3TMt7ONqBZQiJsEMKftoesDlAcRvFpQW8RBzetywIbGvg5k1AU1KyEmup3SLnvzcYbUmrrQQT4CYvbg">
+</div>
+</div>
+</div>
+</div>
+<!-- Feature 2: Mobile Ecosystem -->
+<div class="bg-surface-container-low py-20 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1 flex gap-4">
+<img class="w-1/2 rounded-2xl shadow-xl" data-alt="Three mobile phone mockups displaying the QuickCliniq patient app. Screen 1 shows a QR code for check-in. Screen 2 shows a secure messaging thread with a doctor. Screen 3 shows a timeline of medication reminders. Modern iOS style interface with smooth gradients and bold typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt1_4XumLOYfjTh-Qk6F5eWRJDdCQpsHYjCH-ZMNzS0jxEwthg5-mRbu3KzHvdqGNLkJ9DmxR_zvqGL-aZBXB0buFmKE6c3uvoakeFpMc6LVCnD6fnb9ldLId800MnNZ2WubleSzATnEQmBPQly4N_Q64YH88OrIgO6E528-3uaHZoW8a-zxOAw51x_GPAaa0Fqd_NkIZVNbCHMZZ1R7pvssZ_aP5h77nG8uEUKu8HmAtB3E2Qym2G6g">
+<img class="w-1/2 rounded-2xl shadow-xl mt-12" data-alt="A professional studio shot of a smartphone lying on a clinic desk next to a stethoscope. The screen displays a vibrant notification for a doctor about a new urgent patient update. The lighting is warm and clinical, highlighting the high-quality interface design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_mFaVutiM2v9qLI3_e5ZwtLNivRDzH65obJjv5g3PdLQ1IBiFA5y9gTM94QGZmvo8_TKn8XhmbDsYe3_a1wwnuImHYaAtIO0BchV4zvSxCHjAS20sU8X9vPaQ4o9DewVhIl-FrIqNRUkHwSg7oXPxwkel_5eGzajpfr1J88pIXT8jRotq1u7P1i1wz1ut9z68hr_11ZTasGQiyhpC2Lqdv8OMa4im2jBKSu8vMyF_b7ojoynpWd_g-Q">
+</div>
+<div class="order-1 md:order-2 space-y-6">
+<div class="inline-flex px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30 text-label-mono">Feature 02</div>
+<h3 class="text-headline-md">Patient-Doctor Synergy</h3>
+<p class="text-body-lg text-on-surface-variant">Mobile-first experience ensuring patients stay informed and doctors stay reactive, wherever they are.</p>
+</div>
+</div>
+</div>
+<!-- Feature 3: Smart Scheduling -->
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-12">
+<h3 class="text-headline-md mb-4">Autonomous Scheduling Engine</h3>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto">Predictive algorithms manage patient flow, automatically re-routing appointments to minimize clinic downtime.</p>
+</div>
+<div class="rounded-3xl border border-outline-variant overflow-hidden shadow-2xl">
+<img class="w-full h-[500px] object-cover" data-alt="A high-resolution screenshot of a complex, interactive calendar system. Time slots are color-coded based on appointment type. An overlay shows an 'Optimizer' window with a loading bar and suggestions for moving appointments to maximize efficiency. The aesthetic is extremely clean, minimalist, and functional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwzJZZLhvD3GPSi4hCgRO7eEme1X6v1vVFz5m20EzTpMIYpbkU6j2_U_adp50O_dEWGETAX53_XeISV4lHSRfpZzwHEa5Se4rdBMQuoo85Yv_njmfvXHd6LMwBAvgLys46oVhmu7zsd8ydkqPG_-aNyEhWuv8d-W74G3lL7xPYDJfd9jRxsdSiuTipHFkSrL8svuL6Xulwei5u419K0yp8FNWoJjjB5b4Ct46SLw-xxWFz1u4Mndm7DQ">
+</div>
+</div>
+</section>
+<!-- Architecture Section -->
+<section class="py-24 bg-surface-container-lowest transition-all duration-1000 opacity-100 translate-y-0" id="architecture">
+<div class="max-w-5xl mx-auto px-6 text-center">
+<h2 class="text-headline-md mb-12">System Architecture</h2>
+<div class="relative p-8 rounded-3xl bg-surface border border-outline-variant shadow-inner">
+<img class="w-full h-auto" data-alt="A professional technical architecture diagram for a modern web application. It includes icons for Load Balancers, Node.js API servers, PostgreSQL databases, Redis caches, and OpenAI API endpoints. The diagram uses clean lines, a dark theme consistent with the UI, and glowing connection paths to symbolize data flow. Minimal text, high visual impact." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUh5M1WNV0D15YGLLs88Qc88sTuUBiILyNk4TECy5dKn-gz4KxYFMipkmQyBYayCo4q69kwVYFk7u2usvlKp7WzZplrBIIY6l5mkqwev7wfobsHOMU1sX6T4EdkKeVgeiBP72stzTuIImIK4mh-DkX5JceqIKihE1l-IZxD-ro7n0Kg4WMValJfmwHDtx-HfKO82NVM7ZrRO31OC6mIytKseWa_WhcJ_QVytER8CvpasqPrGmeXdS4Fw">
+</div>
+</div>
+</section>
+<!-- Engineering Highlights -->
+<section class="py-24 max-w-7xl mx-auto px-6 transition-all duration-1000 opacity-100 translate-y-0" id="engineering">
+<h2 class="text-headline-md text-center mb-16">Engineering Highlights</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="p-8 rounded-2xl bg-surface-container-high border border-outline-variant space-y-6 flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+<span class="font-bold">Real-time Sync</span>
+</div>
+<p class="text-sm font-medium text-on-surface-variant">Challenge: Managing concurrent updates from 50+ staff simultaneously.</p>
+<p class="text-sm font-medium text-primary">Decision: Implemented WebSockets with Conflict-free Replicated Data Types (CRDTs).</p>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<p class="text-xs uppercase tracking-widest text-on-secondary-container">Solution: 0ms UI lag</p>
+</div>
+</div>
+<div class="p-8 rounded-2xl bg-surface-container-high border border-outline-variant space-y-6 flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+<span class="font-bold">HIPAA Compliance</span>
+</div>
+<p class="text-sm font-medium text-on-surface-variant">Challenge: Encrypting PII at rest while allowing AI processing.</p>
+<p class="text-sm font-medium text-primary">Decision: AES-256 field-level encryption with a secure API gateway proxy.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<p class="text-xs uppercase tracking-widest text-on-secondary-container">Solution: Bank-grade security</p>
+</div>
+</div>
+<div class="p-8 rounded-2xl bg-surface-container-high border border-outline-variant space-y-6 flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-bold">AI Latency</span>
+</div>
+<p class="text-sm font-medium text-on-surface-variant">Challenge: Large LLM response times slowing down doctor intake.</p>
+<p class="text-sm font-medium text-primary">Decision: Streaming API responses and background pre-fetching.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<p class="text-xs uppercase tracking-widest text-on-secondary-container">Solution: Sub-second perception</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Ownership Section -->
+<section class="py-24 bg-surface-container-low border-t border-outline-variant transition-all duration-1000 opacity-100 translate-y-0">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-headline-md text-center mb-16">Ownership</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="p-6 rounded-xl bg-background border border-outline-variant text-center space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="strategy">strategy</span>
+<h4 class="font-bold">Product Strategy</h4>
+</div>
+<div class="p-6 rounded-xl bg-background border border-outline-variant text-center space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="draw">draw</span>
+<h4 class="font-bold">UX/UI Design</h4>
+</div>
+<div class="p-6 rounded-xl bg-background border border-outline-variant text-center space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="code">code</span>
+<h4 class="font-bold">Frontend Engineering</h4>
+</div>
+<div class="p-6 rounded-xl bg-background border border-outline-variant text-center space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="dns">dns</span>
+<h4 class="font-bold">Backend Engineering</h4>
+</div>
+<div class="p-6 rounded-xl bg-background border border-outline-variant text-center space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="database">database</span>
+<h4 class="font-bold">Database Management</h4>
+</div>
+<div class="p-6 rounded-xl bg-background border border-outline-variant text-center space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="api">api</span>
+<h4 class="font-bold">API Integration</h4>
+</div>
+<div class="p-6 rounded-xl bg-background border border-outline-variant text-center space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="psychology">psychology</span>
+<h4 class="font-bold">AI Implementation</h4>
+</div>
+<div class="p-6 rounded-xl bg-background border border-outline-variant text-center space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="cloud_done">cloud_done</span>
+<h4 class="font-bold">Deployment &amp; CI/CD</h4>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background py-12 border-t border-outline-variant">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="font-bold">QuickCliniq</span>
+</div>
+<div class="flex gap-6 text-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">GitHub</a>
+</div>
+<p class="text-xs text-outline">© 2024 QuickCliniq Case Study. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection observer for fade-in effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+
+
+</body></html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SRIHARSHA GADE - Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#ccc3d8",
+                        "surface-container-high": "#222a3d",
+                        "surface": "#0b1326",
+                        "on-secondary-fixed-variant": "#444749",
+                        "surface-container": "#171f33",
+                        "secondary-container": "#464a4b",
+                        "on-primary-fixed": "#25005a",
+                        "on-secondary-container": "#b6b9bb",
+                        "on-primary-container": "#ede0ff",
+                        "tertiary-container": "#5c677c",
+                        "surface-bright": "#31394d",
+                        "tertiary": "#bcc7de",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "primary": "#d2bbff",
+                        "surface-variant": "#2d3449",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#eaddff",
+                        "primary-fixed-dim": "#d2bbff",
+                        "outline": "#958da1",
+                        "outline-variant": "#4a4455",
+                        "on-error": "#690005",
+                        "secondary": "#c4c7c9",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#3c475a",
+                        "surface-dim": "#0b1326",
+                        "primary-container": "#7c3aed",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#dae2fd",
+                        "surface-container-highest": "#2d3449",
+                        "on-tertiary": "#263143",
+                        "surface-tint": "#d2bbff",
+                        "on-tertiary-fixed": "#111c2d",
+                        "background": "#0b1326",
+                        "secondary-fixed-dim": "#c4c7c9",
+                        "inverse-on-surface": "#283044",
+                        "on-tertiary-container": "#dbe6fe",
+                        "secondary-fixed": "#e0e3e5",
+                        "on-secondary": "#2d3133",
+                        "inverse-surface": "#dae2fd",
+                        "inverse-primary": "#732ee4",
+                        "surface-container-low": "#131b2e",
+                        "on-primary": "#3f008e",
+                        "on-background": "#dae2fd",
+                        "on-secondary-fixed": "#191c1e",
+                        "tertiary-fixed-dim": "#bcc7de",
+                        "surface-container-lowest": "#060e20",
+                        "tertiary-fixed": "#d8e3fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "container-max": "1200px",
+                        "section-gap": "128px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Geist"],
+                        "display-lg": ["Geist"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-sm": ["Geist"],
+                        "display-xl-mobile": ["Geist"],
+                        "display-xl": ["Geist"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+                        "label-mono": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "display-xl-mobile": ["40px", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-surface/80 fixed top-0 w-full z-50 backdrop-blur-xl border-b border-outline-variant/30 text-primary dark:text-primary font-body-md text-body-md">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-16">
+<div class="font-headline-sm text-headline-sm tracking-tighter text-on-surface dark:text-on-surface">
+                SRIHARSHA GADE
+            </div>
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer active:scale-95" href="#">About</a>
+<a class="text-primary font-bold border-b border-primary pb-1 hover:text-primary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Projects</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Resume</a>
+</nav>
+<button class="hidden md:inline-block border border-primary text-primary px-6 py-2 rounded-full hover:bg-primary hover:text-surface transition-all duration-300 font-label-mono text-label-mono">
+                Connect
+            </button>
+<!-- Mobile Menu Icon (Placeholder for interaction) -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[104px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<section class="mb-16">
+<div class="flex items-baseline gap-4 mb-8">
+<span class="font-label-mono text-label-mono text-primary">02/</span>
+<h1 class="font-display-xl-mobile text-display-xl-mobile md:font-display-xl md:text-display-xl text-on-surface">Selected Works</h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                A collection of engineering projects focused on robust architecture, intuitive user interfaces, and solving complex problems with elegant code.
+            </p>
+</section>
+<!-- Projects Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+<!-- Project 1: QuickCliniq -->
+<div class="group bg-surface-container border border-outline-variant/30 rounded-xl overflow-hidden hover:border-primary/50 transition-colors duration-300 relative flex flex-col h-full">
+<!-- Status Tag -->
+<div class="absolute top-4 right-4 z-10 bg-surface/80 backdrop-blur-md border border-outline-variant/50 px-3 py-1 rounded-full flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-mono text-[10px] uppercase tracking-wider text-on-surface-variant">Active</span>
+</div>
+<div class="h-56 overflow-hidden bg-surface-variant relative shrink-0">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105" data-alt="A sleek, modern dashboard interface for a clinical application. Dark mode aesthetic with subtle purple accents, glowing charts, and clean data visualizations. High contrast, technical minimalism style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzL5v2Q_rUrceQk7eovl7RgX8AbIeIQ_yKtwzufh69uZ6cCzZ4Qe45AWXxr-8X6TYJModu2ezscATKw3JJOBV1YoWC72p71qJMxaYrO6ohBjuMLHcU0ODjKpb0lqpXV8rXLT7CJWENqed7oEFwkUaG_Vs6MU1oBdbSaxbO7MU0WJg-NJdDRVw6Kby5CoeZUKm4DGVVxs692C6Iqt_O6CIdwxkwkRMUomd7tpl4VLPteuWrGua9XGD6vg">
+</div>
+<div class="p-6 md:p-8 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[24px] leading-tight text-on-surface mb-3">QuickCliniq</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">
+                        A comprehensive telemedicine platform designed to streamline patient-doctor interactions. Features include real-time video consultations, secure health record management, and an intelligent appointment scheduling system powered by predictive analytics.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="bg-background border border-outline-variant/50 text-on-surface px-3 py-1 rounded-sm font-label-mono text-xs">React</span>
+<span class="bg-background border border-outline-variant/50 text-on-surface px-3 py-1 rounded-sm font-label-mono text-xs">Node.js</span>
+<span class="bg-background border border-outline-variant/50 text-on-surface px-3 py-1 rounded-sm font-label-mono text-xs">WebRTC</span>
+<span class="bg-background border border-outline-variant/50 text-on-surface px-3 py-1 rounded-sm font-label-mono text-xs">PostgreSQL</span>
+</div>
+<div class="mt-auto">
+<a class="inline-flex items-center gap-2 font-label-mono text-label-mono text-primary hover:text-on-surface transition-colors" href="#">
+                            View Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Interactive border effect on hover -->
+<div class="absolute inset-0 border border-transparent group-hover:border-primary/30 rounded-xl pointer-events-none transition-colors duration-300"></div>
+</div>
+<!-- Project 2: CarDash -->
+<div class="group bg-surface-container border border-outline-variant/30 rounded-xl overflow-hidden hover:border-primary/50 transition-colors duration-300 relative flex flex-col h-full">
+<div class="absolute top-4 right-4 z-10 bg-surface/80 backdrop-blur-md border border-outline-variant/50 px-3 py-1 rounded-full flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-mono text-[10px] uppercase tracking-wider text-on-surface-variant">Archived</span>
+</div>
+<div class="h-56 overflow-hidden bg-surface-variant relative shrink-0">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105" data-alt="An automotive dashboard analytics interface. Dark theme with neon blue and slate accents. Features gauge charts, vehicle telemetry data, and real-time mapping overlays. Technical, precise, and high-tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEhDvsZ3Y8GcwhN2CepGIip8O72jcadH_VtNJVyX2cQAcidnz6DviDc0dd3jvP0AWhskSlzLXyeOURXNneg_xUOHVyniioRuqnxGqGY05LXbl-Mf2OkLeZ4ZB8d0p0M6e3j6k-xd9-BlnXP_JDmjktH9qgbJpRhFXtg9pEpFp0Uv3StvkVHrTIn31ALH4syAVGP3i35IIz88d4ambe2yvadeviCi3xYWRiR1hphSSAxuTj-YWE-pwqvg">
+</div>
+<div class="p-6 md:p-8 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[24px] leading-tight text-on-surface mb-3">CarDash</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">
+                        An IoT-enabled dashboard for vehicle telemetry analysis. Collects real-time diagnostic data from OBD-II sensors and presents it through a customizable, high-performance web interface for fleet management and predictive maintenance.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="bg-background border border-outline-variant/50 text-on-surface px-3 py-1 rounded-sm font-label-mono text-xs">Vue.js</span>
+<span class="bg-background border border-outline-variant/50 text-on-surface px-3 py-1 rounded-sm font-label-mono text-xs">Python</span>
+<span class="bg-background border border-outline-variant/50 text-on-surface px-3 py-1 rounded-sm font-label-mono text-xs">GraphQL</span>
+<span class="bg-background border border-outline-variant/50 text-on-surface px-3 py-1 rounded-sm font-label-mono text-xs">InfluxDB</span>
+</div>
+<div class="mt-auto">
+<a class="inline-flex items-center gap-2 font-label-mono text-label-mono text-primary hover:text-on-surface transition-colors" href="#">
+                            View Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="absolute inset-0 border border-transparent group-hover:border-primary/30 rounded-xl pointer-events-none transition-colors duration-300"></div>
+</div>
+<!-- Project 3: Resume Scanner -->
+<div class="group bg-surface-container border border-outline-variant/30 rounded-xl overflow-hidden hover:border-primary/50 transition-colors duration-300 relative flex flex-col h-full">
+<div class="absolute top-4 right-4 z-10 bg-surface/80 backdrop-blur-md border border-outline-variant/50 px-3 py-1 rounded-full flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-mono text-[10px] uppercase tracking-wider text-on-surface-variant">Beta</span>
+</div>
+<div class="h-56 overflow-hidden bg-surface-variant relative shrink-0">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105" data-alt="A split screen showing raw text data being parsed into structured JSON format. Dark minimalist UI, monospaced typography, subtle code syntax highlighting in violet and slate. Engineering-focused, clean, and analytical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnCXd740DWcL8DtEsnjUjFIMltkJFacfTwtiwv4RPGGp9KdPW77Su5t9jMWpXkTYs9-MM1AUrRVPXQUyK_B2F8--F_OJMe8aQu1aAnlGB4-lzCT4rq0X4WFMQrStL5-PvdphXKjTLIlOtBYTVpuRHBjwWw4vuS_1FHNjXbWHtjJjoh1hZFbKmcD2Gr53vaFUh1rS6dvq73eBcI2SiAyjySoBtrC1nMBkx3KmdEH3LQ85Hy3fPtnbZrig">
+</div>
+<div class="p-6 md:p-8 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[24px] leading-tight text-on-surface mb-3">Resume Scanner API</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">
+                        A high-throughput API service utilizing Natural Language Processing to extract structured data from unstructured resume documents. Designed for integration into ATS platforms, featuring high accuracy entity recognition and automated skill mapping.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="bg-background border border-outline-variant/50 text-on-surface px-3 py-1 rounded-sm font-label-mono text-xs">FastAPI</span>
+<span class="bg-background border border-outline-variant/50 text-on-surface px-3 py-1 rounded-sm font-label-mono text-xs">PyTorch</span>
+<span class="bg-background border border-outline-variant/50 text-on-surface px-3 py-1 rounded-sm font-label-mono text-xs">Docker</span>
+<span class="bg-background border border-outline-variant/50 text-on-surface px-3 py-1 rounded-sm font-label-mono text-xs">AWS</span>
+</div>
+<div class="mt-auto">
+<a class="inline-flex items-center gap-2 font-label-mono text-label-mono text-primary hover:text-on-surface transition-colors" href="#">
+                            View Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="absolute inset-0 border border-transparent group-hover:border-primary/30 rounded-xl pointer-events-none transition-colors duration-300"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-surface text-primary dark:text-primary font-label-mono text-label-mono w-full py-section-gap border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop gap-gutter">
+<div class="font-headline-sm text-headline-sm text-on-surface">
+                © 2024 Sriharsha Gade. Built for the future.
+            </div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-on-surface transition-all opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-all opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-all opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-all opacity-80 hover:opacity-100" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Sriharsha Gade - AI Product Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#ccc3d8",
+                      "surface-container-high": "#222a3d",
+                      "surface": "#0b1326",
+                      "on-secondary-fixed-variant": "#444749",
+                      "surface-container": "#171f33",
+                      "secondary-container": "#464a4b",
+                      "on-primary-fixed": "#25005a",
+                      "on-secondary-container": "#b6b9bb",
+                      "on-primary-container": "#ede0ff",
+                      "tertiary-container": "#5c677c",
+                      "surface-bright": "#31394d",
+                      "tertiary": "#bcc7de",
+                      "on-primary-fixed-variant": "#5a00c6",
+                      "primary": "#d2bbff",
+                      "surface-variant": "#2d3449",
+                      "error-container": "#93000a",
+                      "primary-fixed": "#eaddff",
+                      "primary-fixed-dim": "#d2bbff",
+                      "outline": "#958da1",
+                      "outline-variant": "#4a4455",
+                      "on-error": "#690005",
+                      "secondary": "#c4c7c9",
+                      "error": "#ffb4ab",
+                      "on-tertiary-fixed-variant": "#3c475a",
+                      "surface-dim": "#0b1326",
+                      "primary-container": "#7c3aed",
+                      "on-error-container": "#ffdad6",
+                      "on-surface": "#dae2fd",
+                      "surface-container-highest": "#2d3449",
+                      "on-tertiary": "#263143",
+                      "surface-tint": "#d2bbff",
+                      "on-tertiary-fixed": "#111c2d",
+                      "background": "#0b1326",
+                      "secondary-fixed-dim": "#c4c7c9",
+                      "inverse-on-surface": "#283044",
+                      "on-tertiary-container": "#dbe6fe",
+                      "secondary-fixed": "#e0e3e5",
+                      "on-secondary": "#2d3133",
+                      "inverse-surface": "#dae2fd",
+                      "inverse-primary": "#732ee4",
+                      "surface-container-low": "#131b2e",
+                      "on-primary": "#3f008e",
+                      "on-background": "#dae2fd",
+                      "on-secondary-fixed": "#191c1e",
+                      "tertiary-fixed-dim": "#bcc7de",
+                      "surface-container-lowest": "#060e20",
+                      "tertiary-fixed": "#d8e3fb"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "margin-desktop": "48px",
+                      "margin-mobile": "20px",
+                      "container-max": "1200px",
+                      "section-gap": "80px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Geist"
+                      ],
+                      "display-lg": [
+                              "Geist"
+                      ],
+                      "label-mono": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-sm": [
+                              "Geist"
+                      ],
+                      "display-xl-mobile": [
+                              "Geist"
+                      ],
+                      "display-xl": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.03em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-mono": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-xl-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.03em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-xl": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #0F172A; /* Obsidian base */
+            color: #dae2fd; /* on-surface */
+        }
+        
+        .technical-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(74, 68, 85, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(74, 68, 85, 0.1) 1px, transparent 1px);
+            mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+        }
+
+        .image-grayscale-hover {
+            transition: filter 0.5s ease;
+            filter: grayscale(100%);
+        }
+        .project-card:hover .image-grayscale-hover {
+            filter: grayscale(0%);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md relative overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-surface/80 dark:bg-surface/80 border-b border-outline-variant/30">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-16">
+<div class="font-headline-sm text-headline-sm tracking-tighter text-on-surface dark:text-on-surface">
+                SRIHARSHA GADE
+            </div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+<a class="text-primary font-bold border-b border-primary pb-1 transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Projects</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Resume</a>
+</div>
+<!-- Primary Action -->
+<button class="hidden md:flex items-center justify-center border border-on-surface text-on-surface px-6 py-2 rounded font-label-mono text-label-mono hover:bg-on-surface hover:text-surface transition-colors duration-300 cursor-pointer active:scale-95">
+                Connect
+            </button>
+<!-- Mobile Menu Toggle (Simplified for static preview) -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow pt-24 pb-section-gap">
+<!-- Hero Section -->
+<section class="relative pt-12 pb-16 md:pt-24 md:pb-32 flex items-center justify-center px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="absolute inset-0 technical-grid pointer-events-none z-0 opacity-50"></div>
+<div class="relative z-10 w-full flex flex-col items-start gap-6">
+<div class="font-label-mono text-label-mono text-primary tracking-widest flex items-center gap-4">
+                    Sriharsha Gade
+                    <span class="w-1 h-1 rounded-full bg-primary/50"></span>
+                    AI Engineer | Product Builder | Solopreneur
+                </div>
+<h1 class="font-display-xl-mobile text-display-xl-mobile md:font-display-xl md:text-display-xl text-on-surface max-w-4xl leading-tight">Building intelligent products that solve real-world problems.</h1>
+<!-- Compact Tech Chips -->
+<p class="font-body-md text-body-lg text-on-surface-variant max-w-2xl mt-4 leading-relaxed">
+    I'm Sriharsha Gade, an AI Engineer and Product Engineer who enjoys turning ideas into production-ready software. I combine engineering, AI, and product thinking to build practical solutions people can actually use.
+</p>
+</div>
+</section>
+<!-- Featured Projects Section -->
+<section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto py-16">
+<div class="flex items-baseline gap-4 mb-12">
+<h2 class="font-display-lg text-display-lg text-on-surface tracking-tight">Featured Work</h2>
+</div>
+<div class="grid grid-cols-1 gap-12">
+<!-- Project 1: QuickCliniq -->
+<div class="group flex flex-col md:flex-row bg-surface-container border border-outline-variant/30 rounded-2xl overflow-hidden hover:border-outline-variant/70 transition-colors">
+<div class="md:w-1/2 bg-[#111827] relative overflow-hidden min-h-[300px] md:min-h-[400px]">
+<img alt="QuickCliniq Preview" class="w-full h-full object-cover image-grayscale-hover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8FljwL6eiMADttysJmWFdPCSjZHRPjVUM-5_XuxCCjmER9N2OIqZ7_ZwKFyKsZQM89AAylIqa_PhPwdKQ_pf5_NtEu-K_bWXXAO2KjJIHd9giq75LjmR8qSQkOGBZz5rcv_qZx6W0Br8ncZfvl7mtKfshikFPGAgdChvlOZajKaNdCsPjDq-r1g6mL94At4ruY-WCd2xcoXlyBKzPpuauXYJ3asDi6W9oNZFCTEquZ35qPtQEHyJsew">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent md:bg-gradient-to-l opacity-50"></div>
+</div>
+<div class="p-8 md:p-10 flex-grow flex flex-col justify-center z-10 md:w-1/2">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">QuickCliniq</h3>
+<span class="ml-auto px-2.5 py-1 bg-primary/10 text-primary text-xs font-label-mono rounded-full border border-primary/20">Production</span>
+</div>
+<p class="font-body-md text-body-lg text-on-surface-variant mb-6">
+                                A WhatsApp-first clinic management platform that simplifies appointment scheduling, patient communication, and daily operations for healthcare providers.
+                            </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 bg-[#0F172A] border border-outline-variant/30 rounded font-label-mono text-label-mono text-xs text-secondary">React</span>
+<span class="px-2 py-1 bg-[#0F172A] border border-outline-variant/30 rounded font-label-mono text-label-mono text-xs text-secondary">OpenAI</span>
+<span class="px-2 py-1 bg-[#0F172A] border border-outline-variant/30 rounded font-label-mono text-label-mono text-xs text-secondary">Python</span>
+</div>
+<a class="inline-flex items-center gap-2 text-on-surface font-label-mono text-sm hover:text-primary transition-colors group-hover:translate-x-1 duration-300" href="#">
+                                View Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 2: CarDash -->
+<div class="group flex flex-col md:flex-row-reverse bg-surface-container border border-outline-variant/30 rounded-2xl overflow-hidden hover:border-outline-variant/70 transition-colors">
+<div class="md:w-1/2 bg-[#111827] relative overflow-hidden min-h-[300px] md:min-h-[400px]">
+<img alt="CarDash Preview" class="w-full h-full object-cover image-grayscale-hover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdWU_qia1FZ9ZEnF49MVCWa29KTJuCuAZjkfV7BAQGrbyyxlXM0f7cvrGQ5J8DDTWNIs43NgTMlo2Qi4t1FFlBiU89-6WTCIMX5aTM7wmm7pn6mxs4ikRRtWWLA0vVNpKfM4aBfxdb5iiiaYwquHSs33O4bOxvMX_sZfeKzqjOBEzvcYw4VPTZm6qctwM-kxlS8I4b41tlnkhmKzjqp3somNlpoBeW0-SMfUZa4Ddzyo1zysNu__u0Dw">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent md:bg-gradient-to-r opacity-50"></div>
+</div>
+<div class="p-8 md:p-10 flex-grow flex flex-col justify-center z-10 md:w-1/2">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">speed</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">CarDash</h3>
+<span class="ml-auto px-2.5 py-1 bg-primary/10 text-primary text-xs font-label-mono rounded-full border border-primary/20">Beta</span>
+</div>
+<p class="font-body-md text-body-lg text-on-surface-variant mb-6">
+                                An AI-powered automotive assistant designed to help vehicle owners understand issues, explore solutions, and make informed maintenance decisions.
+                            </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 bg-[#0F172A] border border-outline-variant/30 rounded font-label-mono text-label-mono text-xs text-secondary">Next.js</span>
+<span class="px-2 py-1 bg-[#0F172A] border border-outline-variant/30 rounded font-label-mono text-label-mono text-xs text-secondary">PostgreSQL</span>
+<span class="px-2 py-1 bg-[#0F172A] border border-outline-variant/30 rounded font-label-mono text-label-mono text-xs text-secondary">AWS</span>
+</div>
+<a class="inline-flex items-center gap-2 text-on-surface font-label-mono text-sm hover:text-primary transition-colors group-hover:translate-x-1 duration-300" href="#">
+                                View Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 3: Resume Scanner -->
+<div class="group flex flex-col md:flex-row bg-surface-container border border-outline-variant/30 rounded-2xl overflow-hidden hover:border-outline-variant/70 transition-colors">
+<div class="md:w-1/2 bg-[#111827] relative overflow-hidden min-h-[300px] md:min-h-[400px] flex items-center justify-center border-b md:border-b-0 md:border-r border-outline-variant/30">
+<!-- Placeholder for Resume Scanner Image if none provided -->
+<span class="material-symbols-outlined text-6xl text-outline-variant/50">document_scanner</span>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent md:bg-gradient-to-l opacity-50"></div>
+</div>
+<div class="p-8 md:p-10 flex-grow flex flex-col justify-center z-10 md:w-1/2">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">find_in_page</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Resume Scanner</h3>
+<span class="ml-auto px-2.5 py-1 bg-surface-variant text-on-surface-variant text-xs font-label-mono rounded-full border border-outline-variant/30">Archived</span>
+</div>
+<p class="font-body-md text-body-lg text-on-surface-variant mb-6">
+                                A role-aware resume analysis tool that helps recruiters evaluate candidates more consistently using AI-assisted screening.
+                            </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 bg-[#0F172A] border border-outline-variant/30 rounded font-label-mono text-label-mono text-xs text-secondary">Vue.js</span>
+<span class="px-2 py-1 bg-[#0F172A] border border-outline-variant/30 rounded font-label-mono text-label-mono text-xs text-secondary">FastAPI</span>
+<span class="px-2 py-1 bg-[#0F172A] border border-outline-variant/30 rounded font-label-mono text-label-mono text-xs text-secondary">Spacy</span>
+</div>
+<a class="inline-flex items-center gap-2 text-on-surface font-label-mono text-sm hover:text-primary transition-colors group-hover:translate-x-1 duration-300" href="#">
+                                View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Minimal About -->
+<section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto py-16 border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6">About</h2>
+<div class="font-body-md text-on-surface-variant space-y-4">
+<p class=""></p><p data-start="1297" data-end="1559" class="PDq2pG_selectionAnchorContainer">I'm passionate about building software that solves meaningful problems. Rather than focusing only on writing code, I enjoy understanding the problem, designing the experience, making technical decisions, and delivering products that people genuinely find useful.<span aria-hidden="true" class="PDq2pG_selectionAnchor"></span></p>
+<p data-start="1561" data-end="1793" class="">Over the past few years, I've worked across AI, backend systems, frontend development, and product design. That experience has shaped how I approach software: every technical decision should ultimately improve the user's experience.</p><p></p>
+<p class="">
+                            I'm currently focused on building AI-driven products that combine reliable engineering, thoughtful product design, and practical automation.
+                        </p>
+<a class="inline-block mt-4 text-primary hover:text-on-surface transition-colors font-label-mono text-sm underline underline-offset-4" href="#">Read More</a>
+</div>
+</div>
+<div class="flex items-center md:justify-end">
+<a class="inline-flex items-center gap-4 text-on-surface group hover:text-primary transition-colors" href="mailto:hello@example.com">
+<span class="font-display-lg text-display-lg md:text-[56px]">Get in touch</span>
+<span class="material-symbols-outlined text-[40px] transform group-hover:rotate-45 transition-transform duration-300">arrow_upward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface dark:bg-surface border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop gap-gutter">
+<div class="font-headline-sm text-headline-sm text-on-surface">
+                SRIHARSHA GADE
+            </div>
+<div class="font-label-mono text-label-mono text-on-surface-variant text-xs">
+                © 2024 Sriharsha Gade. Built for the future.
+            </div>
+<div class="flex items-center gap-6 font-label-mono text-label-mono text-sm">
+<a class="text-on-surface-variant hover:text-on-surface transition-all opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-all opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-all opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-all opacity-80 hover:opacity-100" href="#">Email</a>
+</div>
+</div>
+</footer>
+
+
+</body></html>
