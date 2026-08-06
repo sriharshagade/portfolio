@@ -1,10 +1,12 @@
-﻿import { FileText, Github, Linkedin, MapPin, MessageCircle, type LucideIcon } from "lucide-react";
+﻿import { FileText, Github, Linkedin, MapPin, MessageCircle, Mail, MessageSquare, type LucideIcon } from "lucide-react";
 
 import { ContactForm } from "@/components/sections/contact-form";
 import { TechChip } from "@/components/ui/tech-chip";
 
 const focusAreas = ["AI Products", "Developer Tools", "SaaS", "Healthcare Tech", "Product Engineering", "Automation"];
 const socials: Array<{ label: string; icon: LucideIcon; href: string }> = [
+  { label: "Email", icon: Mail, href: "mailto:hello@sriharshagade.com" },
+  { label: "WhatsApp", icon: MessageSquare, href: "https://wa.me/918297997929" },
   { label: "LinkedIn", icon: Linkedin, href: "https://in.linkedin.com/in/sriharshagade" },
   { label: "GitHub", icon: Github, href: "https://github.com/sriharshagade" },
   { label: "Resume", icon: FileText, href: "https://drive.google.com/uc?export=download&id=1KvybdGDfAKJafryX19tqAxS6IMc4rrrq" },
