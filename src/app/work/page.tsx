@@ -1,5 +1,3 @@
-import { MapPin } from "lucide-react";
-
 export const metadata = { title: "Work" };
 
 export default function WorkPage() {
