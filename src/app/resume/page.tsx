@@ -1,4 +1,4 @@
-import { Download, ExternalLink } from "lucide-react";
+import { Download, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
@@ -10,60 +10,66 @@ export default function ResumePage() {
   const resumePdfUrl = "https://docs.google.com/document/d/1URW0U3VKQrB1ei65MZ4aqq-fwfPQ6m-v/export?format=pdf";
 
   return (
-    <main className="pt-32">
-      <section className="container pb-32 md:pb-40">
-        <div className="max-w-2xl space-y-12">
+    <main className="pt-16">
+      <section className="container pb-16">
+        <div className="max-w-2xl space-y-8">
+          {/* Hero */}
           <div className="space-y-4">
             <h1 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl">
               Resume
             </h1>
             <p className="text-body-md text-on-surface-variant">
-              AI Engineer & Product Builder | Forward Deployment | Business Discovery
+              AI Product Engineer building production AI systems from business discovery to deployment.
             </p>
           </div>
 
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <h2 className="font-geist text-headline-md text-on-background-emphasis">Download Resume</h2>
-              <p className="text-body-md text-on-surface-variant">
-                Download my resume as a PDF to view offline or share with your team.
-              </p>
-            </div>
+          {/* Primary Actions */}
+          <div className="flex flex-wrap gap-4">
+            <Button asChild size="lg" variant="primary">
+              <a href={resumePdfUrl} download="Sriharsha_Gade_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <Download aria-hidden="true" className="size-4" />
+                Download Resume
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
+                View Resume Online
+              </a>
+            </Button>
+          </div>
 
-            <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" variant="primary">
-                <a href={resumePdfUrl} download="Sriharsha_Gade_Resume.pdf" target="_blank" rel="noopener noreferrer">
-                  <Download aria-hidden="true" className="size-4" />
-                  Download as PDF
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink aria-hidden="true" className="size-4" />
-                  View in Google Docs
-                </a>
-              </Button>
+          {/* Resume Overview */}
+          <div className="border-t border-outline-variant/20 pt-8">
+            <div className="space-y-3">
+              <h2 className="font-geist text-headline-sm text-on-background-emphasis">Resume Overview</h2>
+              <p className="text-body-md text-on-surface-variant">
+                This resume highlights my experience building AI-powered products across healthcare, automotive, and enterprise software. It covers product discovery, AI engineering, backend development, and end-to-end product delivery.
+              </p>
             </div>
           </div>
 
-          <div className="border-t border-outline-variant/20 pt-12">
-            <div className="space-y-6">
-              <div>
-                <h3 className="mb-3 font-geist text-headline-sm text-on-background-emphasis">Quick Summary</h3>
-                <p className="text-body-md text-on-surface-variant">
-                  I specialize in bridging business challenges and AI engineering. My experience spans product discovery, AI prototyping, LLM evaluation, and technical direction—helping teams turn ambiguous problems into validated solutions.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="mb-3 font-geist text-headline-sm text-on-background-emphasis">Get in Touch</h3>
-                <p className="text-body-md text-on-surface-variant">
-                  Interested in discussing opportunities? Feel free to{" "}
-                  <Link className="text-primary hover:underline" href="/contact">
-                    reach out
-                  </Link>
-                  .
-                </p>
+          {/* Explore Further */}
+          <div className="border-t border-outline-variant/20 pt-8">
+            <div className="space-y-4">
+              <h2 className="font-geist text-headline-sm text-on-background-emphasis">Want more than a resume?</h2>
+              <p className="text-body-md text-on-surface-variant">
+                The resume provides a summary. My portfolio includes architecture decisions, product thinking, implementation details, and project case studies.
+              </p>
+              <div className="flex flex-col gap-3 pt-2">
+                <Link
+                  className="inline-flex items-center gap-2 text-body-md text-primary transition-colors hover:text-on-background-emphasis"
+                  href="/projects"
+                >
+                  Explore Projects
+                  <ArrowRight aria-hidden="true" className="size-4" />
+                </Link>
+                <Link
+                  className="inline-flex items-center gap-2 text-body-md text-primary transition-colors hover:text-on-background-emphasis"
+                  href="/about"
+                >
+                  About Me
+                  <ArrowRight aria-hidden="true" className="size-4" />
+                </Link>
               </div>
             </div>
           </div>
