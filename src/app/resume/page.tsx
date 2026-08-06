@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 export const metadata = { title: "Resume" };
 
 export default function ResumePage() {
-  const resumeUrl = "https://docs.google.com/document/d/1URW0U3VKQrB1ei65MZ4aqq-fwfPQ6m-v/edit?usp=sharing";
-  const resumePdfUrl = "https://docs.google.com/document/d/1URW0U3VKQrB1ei65MZ4aqq-fwfPQ6m-v/export?format=pdf";
+  const resumeUrl = "https://drive.google.com/file/d/1KvybdGDfAKJafryX19tqAxS6IMc4rrrq/view?usp=sharing";
+  const resumePdfUrl = "https://drive.google.com/uc?export=download&id=1KvybdGDfAKJafryX19tqAxS6IMc4rrrq";
 
   return (
     <main className="pt-16">
