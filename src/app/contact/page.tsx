@@ -7,7 +7,7 @@ const focusAreas = ["AI Products", "Developer Tools", "SaaS", "Healthcare Tech",
 const socials: Array<{ label: string; icon: LucideIcon; href: string }> = [
   { label: "LinkedIn", icon: Linkedin, href: "https://in.linkedin.com/in/sriharshagade" },
   { label: "GitHub", icon: Github, href: "https://github.com/sriharshagade" },
-  { label: "Resume", icon: FileText, href: "/resume" },
+  { label: "Resume", icon: FileText, href: "https://drive.google.com/uc?export=download&id=1KvybdGDfAKJafryX19tqAxS6IMc4rrrq" },
 ];
 
 export const metadata = { title: "Contact" };
