@@ -17,7 +17,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html className="dark" lang="en">
       <body>
         <Navbar />
-        {children}
+        <div className="pt-[72px] md:pt-[80px]">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

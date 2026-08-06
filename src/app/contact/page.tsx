@@ -1,12 +1,12 @@
-﻿import { FileText, Github, Linkedin, MapPin, MessageCircle, Mail, MessageSquare, type LucideIcon } from "lucide-react";
+﻿import { FileText, Github, Linkedin, MapPin, MessageCircle, Mail, type LucideIcon } from "lucide-react";
 
 import { ContactForm } from "@/components/sections/contact-form";
 import { TechChip } from "@/components/ui/tech-chip";
 
 const focusAreas = ["AI Products", "Developer Tools", "SaaS", "Healthcare Tech", "Product Engineering", "Automation"];
-const socials: Array<{ label: string; icon: LucideIcon; href: string }> = [
+const socials: Array<{ label: string; icon?: LucideIcon; isCustom?: boolean; href: string }> = [
   { label: "Email", icon: Mail, href: "mailto:hello@sriharshagade.com" },
-  { label: "WhatsApp", icon: MessageSquare, href: "https://wa.me/918297997929" },
+  { label: "WhatsApp", isCustom: true, href: "https://wa.me/918297997929" },
   { label: "LinkedIn", icon: Linkedin, href: "https://in.linkedin.com/in/sriharshagade" },
   { label: "GitHub", icon: Github, href: "https://github.com/sriharshagade" },
   { label: "Resume", icon: FileText, href: "https://drive.google.com/uc?export=download&id=1KvybdGDfAKJafryX19tqAxS6IMc4rrrq" },
@@ -16,7 +16,7 @@ export const metadata = { title: "Contact" };
 
 export default function ContactPage() {
   return (
-    <main className="container pt-32 pb-section-gap">
+    <main className="container pb-section-gap">
       <div className="grid gap-gutter md:grid-cols-12 md:gap-x-24">
         <section className="md:col-span-7">
           <header className="mb-12">
@@ -45,6 +45,15 @@ export default function ContactPage() {
             <p className="mb-4 font-mono text-xs uppercase tracking-widest text-primary">Socials</p>
             <div className="flex gap-6">
               {socials.map((item) => {
+                if (item.isCustom) {
+                  return (
+                    <a className="flex flex-col items-center gap-1 text-on-surface-variant transition-colors hover:text-primary" href={item.href} key={item.label}>
+                      <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-5 h-5" />
+                      <span className="font-mono text-[10px]">{item.label}</span>
+                    </a>
+                  );
+                }
+                if (!item.icon) return null;
                 const Icon = item.icon;
                 return <a className="flex flex-col items-center gap-1 text-on-surface-variant transition-colors hover:text-primary" href={item.href} key={item.label}><Icon className="size-5" /><span className="font-mono text-[10px]">{item.label}</span></a>;
               })}

@@ -10,7 +10,7 @@ export default function ResumePage() {
   const resumePdfUrl = "https://drive.google.com/uc?export=download&id=1KvybdGDfAKJafryX19tqAxS6IMc4rrrq";
 
   return (
-    <main className="pt-16">
+    <main>
       <section className="container pb-16">
         <div className="max-w-2xl space-y-8">
           {/* Hero */}

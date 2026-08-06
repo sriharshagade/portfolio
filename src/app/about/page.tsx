@@ -8,7 +8,7 @@ export const metadata = { title: "About" };
 export default function AboutPage() {
   return (
     <main>
-      <section className="relative overflow-hidden pt-12 md:pt-16">
+      <section className="relative overflow-hidden">
         <div className="container relative z-10 pb-16 pt-4 md:pb-20 md:pt-6">
           <div className="grid gap-gutter lg:grid-cols-12 items-start">
             <div className="lg:col-span-6 space-y-6">
