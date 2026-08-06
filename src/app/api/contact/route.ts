@@ -1,15 +1,7 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: parseInt(process.env.SMTP_PORT || "587"),
-  secure: false,
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
@@ -28,10 +20,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Send email to your Zoho inbox
-    await transporter.sendMail({
-      from: `"Sriharsha Gade" <${process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_TO,
+    // Send email via Resend
+    const result = await resend.emails.send({
+      from: "hello@sriharshagade.com",
+      to: process.env.CONTACT_TO || "hello@sriharshagade.com",
       replyTo: email,
       subject: `New Portfolio Contact - ${subject}`,
       html: `
@@ -45,6 +37,14 @@ export async function POST(request: NextRequest) {
         <p>${message.replace(/\n/g, "<br />")}</p>
       `,
     });
+
+    if (result.error) {
+      console.error("Resend error:", result.error);
+      return NextResponse.json(
+        { error: "Failed to send message. Please try again." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
       { success: true, message: "Message received. I&apos;ll get back to you soon!" },
