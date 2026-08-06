@@ -19,7 +19,7 @@ export function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-outline-variant/30 bg-surface/80 backdrop-blur-xl pt-2 md:pt-3">
+    <header className="fixed top-0 z-50 w-full border-t border-b border-outline-variant/30 bg-surface/80 backdrop-blur-xl pt-2 md:pt-3">
       <div className="container flex h-16 items-center justify-between">
         <Link className="font-geist text-sm tracking-[-0.04em] text-on-surface" style={{ fontSize: "21px", fontWeight: 500, lineHeight: 1.3 }} href="/">
           SRIHARSHA GADE
