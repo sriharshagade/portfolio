@@ -7,8 +7,8 @@ const capabilities = ["Business Discovery", "AI Prototyping", "LLM Evaluation", 
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-20 md:pt-24">
-      <div className="technical-grid absolute inset-x-0 top-20 h-[520px] opacity-60" />
+    <section className="relative overflow-hidden pt-16">
+      <div className="technical-grid absolute inset-x-0 top-16 h-[520px] opacity-60" />
       <div className="container relative z-10 pb-20 pt-4 md:pb-28 md:pt-6">
         <div className="max-w-[54rem] space-y-6">
           <div className="space-y-5">
