@@ -6,7 +6,7 @@ export const metadata = { title: "Projects" };
 
 export default function ProjectsPage() {
   return (
-    <main className="container pt-[104px] pb-section-gap">
+    <main className="container pt-[104px] pb-32 md:pb-section-gap">
       <section className="mb-16">
         <SectionHeader
           copy="A collection of engineering projects focused on product architecture, AI workflows, intuitive interfaces, and real-world execution."

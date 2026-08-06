@@ -2,7 +2,7 @@
 
 export function Timeline() {
   return (
-    <section className="container pt-8 pb-16 md:pt-12 md:pb-24">
+    <section className="container pt-8 pb-24 md:pt-12 md:pb-32">
       <div className="relative max-w-3xl border-l border-outline-variant/70 pl-8">
         {experience.map((item) => (
           <article className="relative pb-12 last:pb-0" key={item.role}>
