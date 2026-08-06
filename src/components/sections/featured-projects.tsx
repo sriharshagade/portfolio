@@ -8,7 +8,7 @@ import type { Project } from "@/data/projects";
 
 export function FeaturedProjects({ projects }: { projects: Project[] }) {
   return (
-    <section className="container pb-24 md:pb-32">
+    <section className="container pb-32 md:pb-40">
       <h2 className="mb-12 font-geist text-display-lg text-on-background-emphasis">Selected Case Studies</h2>
       <div className="grid gap-12">
         {projects.slice(0, 3).map((project, index) => {
