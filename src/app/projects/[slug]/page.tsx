@@ -29,7 +29,7 @@ export default async function ProjectCaseStudyPage({ params }: ProjectPageProps)
     <main className="pt-16">
       <section className="container flex min-h-[840px] flex-col items-center justify-center py-20 text-center">
         <div className="max-w-6xl space-y-8">
-          <p className="font-mono text-label-mono text-primary">{project.category}</p>
+          <p className="font-mono text-label-mono text-primary border border-primary/40 px-2 py-1 rounded-sm inline-block">{project.category}</p>
           <h1 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl">{project.name}</h1>
           <p className="mx-auto max-w-2xl text-body-lg text-on-surface-variant">{project.headline}</p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -66,7 +66,7 @@ export default async function ProjectCaseStudyPage({ params }: ProjectPageProps)
         <div className="grid gap-8">
           {project.sections.map((section) => (
             <article className="grid gap-gutter border-t border-outline-variant/30 pt-10 md:grid-cols-12" id={section.title.toLowerCase().replaceAll(" ", "-")} key={section.title}>
-              <div className="md:col-span-3"><p className="font-mono text-label-mono text-primary">{section.eyebrow}/</p></div>
+              <div className="md:col-span-3"><p className="font-mono text-label-mono text-primary border border-primary/40 px-2 py-1 rounded-sm inline-block">{section.eyebrow}/</p></div>
               <div className="md:col-span-9">
                 <h2 className="mb-4 font-geist text-headline-md text-on-background-emphasis">{section.title}</h2>
                 <p className="max-w-3xl text-body-lg text-on-surface-variant">{section.body}</p>
