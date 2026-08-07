@@ -1,4 +1,5 @@
 ﻿import { FileText, Github, Linkedin, MapPin, MessageCircle, Mail, type LucideIcon } from "lucide-react";
+import Image from "next/image";
 
 import { ContactForm } from "@/components/sections/contact-form";
 import { PageHeader } from "@/components/ui/page-header";
@@ -38,22 +39,22 @@ export default function ContactPage() {
             <p className="mt-3 flex items-center gap-2 text-on-surface-variant"><MapPin className="size-5" />Bengaluru, India</p>
           </section>
           <section className="border-b border-outline-variant/30 pb-8">
-            <p className="mb-4"><LabelTag>Availability</LabelTag></p>
-            <p className="text-body-md text-on-surface-variant">Open to full-time opportunities, product collaborations, consulting, and AI projects.</p>
-            <p className="mt-4 font-mono text-label-mono text-on-surface-variant/70">Typical response time: ~24 hours</p>
-          </section>
-          <section className="border-b border-outline-variant/30 pb-8">
             <p className="mb-4"><LabelTag>Focus Areas</LabelTag></p>
             <div className="flex flex-wrap gap-2">{focusAreas.map((area) => <TechChip key={area}>{area}</TechChip>)}</div>
           </section>
-          <section>
+          <section className="border-b border-outline-variant/30 pb-8">
             <p className="mb-4"><LabelTag>Socials</LabelTag></p>
             <div className="flex gap-6">
               {socials.map((item) => {
                 if (item.isCustom) {
                   return (
-                    <a className="focus-ring flex flex-col items-center gap-1 rounded-sm text-on-surface-variant transition-colors hover:text-primary" href={item.href} key={item.label}>
-                      <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-5 h-5" />
+                    <a className="focus-ring flex flex-col items-center gap-1 rounded-sm text-on-surface-variant transition-colors hover:text-primary group" href={item.href} key={item.label}>
+                      <svg className="size-5 text-on-surface-variant group-hover:text-primary transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M3 21l1.65-5.27A9 9 0 1 1 19.07 3.34"/>
+                        <path d="M9 10a1 1 0 1 1 2 0a1 1 0 0 1 -2 0"/>
+                        <path d="M12 13a1 1 0 1 1 2 0a1 1 0 0 1 -2 0"/>
+                        <path d="M15 10a1 1 0 1 1 2 0a1 1 0 0 1 -2 0"/>
+                      </svg>
                       <span className="font-mono text-micro">{item.label}</span>
                     </a>
                   );
@@ -63,6 +64,11 @@ export default function ContactPage() {
                 return <a className="focus-ring flex flex-col items-center gap-1 rounded-sm text-on-surface-variant transition-colors hover:text-primary" href={item.href} key={item.label}><Icon className="size-5" /><span className="font-mono text-micro">{item.label}</span></a>;
               })}
             </div>
+          </section>
+          <section>
+            <p className="mb-4"><LabelTag>Availability</LabelTag></p>
+            <p className="text-body-md text-on-surface-variant">Open to full-time opportunities, product collaborations, consulting, and AI projects.</p>
+            <p className="mt-4 font-mono text-label-mono text-on-surface-variant/70">Typical response time: ~24 hours</p>
           </section>
         </aside>
       </div>

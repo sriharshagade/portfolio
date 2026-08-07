@@ -17,9 +17,7 @@ export function KeyContributions({ contributions }: { contributions: Contributio
 
   return (
     <div>
-      <h3 className="mb-6">
-        <LabelTag variant="secondary">Key Contributions</LabelTag>
-      </h3>
+      <h3 className="font-geist text-headline-md text-on-background-emphasis mb-6">Key Contributions</h3>
       <div className="flex flex-col gap-4">
         {contributions.map((contribution) => {
           const isOpen = expanded === contribution.title;
@@ -27,7 +25,7 @@ export function KeyContributions({ contributions }: { contributions: Contributio
             <div
               key={contribution.title}
               className={`border-l-2 pl-4 py-2 transition-colors bg-surface-container-lowest/50 ${
-                contribution.isPrimary || isOpen ? "border-primary" : "border-outline-variant hover:border-primary"
+                isOpen ? "border-primary" : "border-transparent hover:border-primary"
               }`}
             >
               <button

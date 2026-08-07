@@ -22,7 +22,7 @@ export function Hero() {
 
           <div className="flex flex-nowrap gap-2 overflow-x-auto md:overflow-x-visible">
             {capabilities.map((capability) => (
-              <Badge key={capability} variant="capability">
+              <Badge key={capability} variant="status" pulse={false}>
                 {capability}
               </Badge>
             ))}

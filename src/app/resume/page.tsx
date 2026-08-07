@@ -62,6 +62,13 @@ export default function ResumePage() {
                 </Link>
                 <Link
                   className="focus-ring inline-flex items-center gap-2 text-body-md text-primary transition-colors hover:text-on-background-emphasis"
+                  href="/work"
+                >
+                  Work
+                  <ArrowRight aria-hidden="true" className="size-4" />
+                </Link>
+                <Link
+                  className="focus-ring inline-flex items-center gap-2 text-body-md text-primary transition-colors hover:text-on-background-emphasis"
                   href="/about"
                 >
                   About Me

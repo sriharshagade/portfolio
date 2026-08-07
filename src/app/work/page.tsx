@@ -65,11 +65,16 @@ export default function WorkPage() {
     <main className="container pb-32 md:pb-40">
       {/* Header */}
       <div className={`mb-16 ${SPACING.hierarchy.majorBreak}`}>
-        <PageHeader
-          label="PRIMARY EXPERIENCE // JAN 2024 – PRESENT"
-          title="Building AI Products at Kirusa"
-        />
-        <div className="h-px bg-outline-variant/50 w-full" />
+        <div className="space-y-4">
+          <div className="font-mono text-label-mono text-primary">PRIMARY EXPERIENCE</div>
+          <div className="space-y-2">
+            <h1 className="font-geist text-headline-md text-on-background-emphasis">
+              AI/ML Engineer
+            </h1>
+            <p className="font-geist text-body-md text-on-background-emphasis">Kirusa</p>
+          </div>
+        </div>
+        <div className="h-px bg-outline-variant/50 w-full mt-6" />
       </div>
 
       {/* Two Column Layout */}
@@ -78,10 +83,7 @@ export default function WorkPage() {
         <div className="md:col-span-8 flex flex-col gap-16">
           {/* The Role */}
           <section>
-            <div className="flex items-center gap-2 mb-6">
-              <span className="w-2 h-2 bg-primary" />
-              <h2><LabelTag variant="secondary">The Role</LabelTag></h2>
-            </div>
+            <h2 className="font-geist text-headline-md text-on-background-emphasis mb-6">The Role</h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
               I contribute to AI-powered products by combining business discovery, AI engineering, backend development,
               and cross-functional collaboration. My work spans product thinking, rapid prototyping, implementation, and
@@ -91,10 +93,7 @@ export default function WorkPage() {
 
           {/* Product Work */}
           <section>
-            <div className="flex items-center gap-2 mb-6">
-              <span className="w-2 h-2 bg-primary" />
-              <h2><LabelTag variant="secondary">Product Work</LabelTag></h2>
-            </div>
+            <h2 className="font-geist text-headline-md text-on-background-emphasis mb-6">Product Work</h2>
             <div className="flex flex-col gap-6">
               {projects.map((project) => (
                 <div key={project.name} className="border border-outline-variant/50 p-6 flex flex-col gap-4 rounded-lg">
@@ -116,13 +115,13 @@ export default function WorkPage() {
 
       {/* Prior Experience Section */}
       <section className="mt-24 pt-16 border-t border-outline-variant/30">
-        <div className="font-mono text-label-mono text-on-surface-variant mb-6">PRIOR EXPERIENCE // AUG 2021 – OCT 2022</div>
+        <div className="font-mono text-label-mono text-primary mb-6">PRIOR EXPERIENCE</div>
         <div className="max-w-3xl space-y-6">
-          <div>
-            <h2 className="font-headline-md text-headline-md text-on-background-emphasis mb-2">
+          <div className="space-y-2">
+            <h2 className="font-geist text-headline-md text-on-background-emphasis">
               Trainee Software Engineer
             </h2>
-            <p className="font-body-md text-body-md text-on-surface-variant">Innominds</p>
+            <p className="font-geist text-body-md text-on-background-emphasis">Innominds</p>
           </div>
           <p className="font-body-lg text-body-lg text-on-surface-variant">
             Worked on business intelligence and data engineering solutions, developing data pipelines, dashboards, and reporting systems for enterprise clients. Collaborated with cross-functional teams to improve data quality, automate reporting workflows, and support data-driven decision-making.

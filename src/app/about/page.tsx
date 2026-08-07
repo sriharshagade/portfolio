@@ -23,9 +23,9 @@ export default function AboutPage() {
               <p className="text-body-md leading-7 text-on-surface-variant">
                 I care about clarity. That means asking hard questions early, building to learn, evaluating honestly, and giving engineering teams the context they need to make good decisions.
               </p>
-              <div className="flex items-center gap-2 text-body-md text-on-surface-variant">
-                <MapPin className="size-5 flex-shrink-0" />
-                <span>Bengaluru, India</span>
+              <div className="flex items-center gap-2 text-body-md">
+                <MapPin className="size-5 flex-shrink-0 text-primary" />
+                <span className="text-on-surface-variant">Bengaluru, India</span>
               </div>
             </div>
             <div className="md:col-span-5 flex items-start">

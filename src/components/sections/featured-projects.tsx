@@ -14,13 +14,13 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
         {projects.slice(0, 3).map((project, index) => {
           const Icon = project.icon;
           return (
-            <article className="group relative overflow-hidden rounded-xl border border-outline-variant/30 bg-surface-container transition-colors hover:border-primary/50 md:grid md:grid-cols-2" key={project.slug}>
+            <article className="group relative overflow-hidden rounded-xl border border-outline-variant/30 bg-surface transition-colors hover:border-primary/50 md:grid md:grid-cols-2" key={project.slug}>
               {/* Full-card clickable overlay */}
               <Link href={`/projects/${project.slug}`} className="focus-ring absolute inset-0 z-10 rounded-xl" aria-label={`View ${project.name} case study`} />
 
               <div className={`${index % 2 === 1 ? "md:order-2" : ""} relative h-[250px] overflow-hidden bg-surface-variant md:h-[400px]`}>
                 <Image alt={project.imageAlt} className="object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" fill sizes="(min-width: 768px) 50vw, 90vw" src={project.image} />
-                <div className="absolute inset-0 bg-gradient-to-t from-surface-container/80 to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-60" />
               </div>
               <div className="relative z-20 flex flex-col justify-center p-8 md:p-10">
                 <div className="mb-4 flex items-center gap-3">
