@@ -1,9 +1,10 @@
-﻿import { cn } from "@/lib/utils";
+﻿import { Badge } from "./badge";
 
 export function TechChip({ children, className }: { children: React.ReactNode; className?: string }) {
+  // Custom className extends the default "tech" variant styling instead of replacing it
   return (
-    <span className={cn("rounded-sm border border-outline-variant bg-background px-4 py-2 font-mono text-label-mono text-on-surface-variant", className)}>
+    <Badge className={className} variant="tech">
       {children}
-    </span>
+    </Badge>
   );
 }

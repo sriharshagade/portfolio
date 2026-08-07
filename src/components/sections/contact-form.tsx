@@ -15,11 +15,11 @@ const fields = [
 function Field({ id, label, type }: { id: string; label: string; type: string }) {
   return (
     <div className="space-y-2">
-      <label className="font-mono text-xs uppercase tracking-wider text-on-surface-variant/60" htmlFor={id}>
+      <label className="font-mono text-xs uppercase tracking-wider text-text-muted" htmlFor={id}>
         {label}
       </label>
       <input
-        className="w-full border-0 border-b border-outline-variant/70 bg-transparent px-0 py-3 text-on-surface outline-none transition-colors placeholder:text-transparent focus:border-primary focus:ring-0"
+        className="focus-ring w-full border-0 border-b border-outline-variant/70 bg-transparent px-0 py-3 text-on-surface outline-none transition-colors placeholder:text-transparent focus:border-primary"
         id={id}
         name={id}
         placeholder={label}
@@ -65,11 +65,11 @@ export function ContactForm() {
       <form className="mt-4 flex flex-col gap-8" onSubmit={handleSubmit}>
         {fields.map((field) => <Field key={field.id} {...field} />)}
         <div className="space-y-2">
-          <label className="font-mono text-xs uppercase tracking-wider text-on-surface-variant/60" htmlFor="message">
+          <label className="font-mono text-xs uppercase tracking-wider text-text-muted" htmlFor="message">
             Message
           </label>
           <textarea
-            className="min-h-28 w-full resize-y border-0 border-b border-outline-variant/70 bg-transparent px-0 py-3 text-on-surface outline-none transition-colors placeholder:text-transparent focus:border-primary focus:ring-0"
+            className="focus-ring min-h-28 w-full resize-y border-0 border-b border-outline-variant/70 bg-transparent px-0 py-3 text-on-surface outline-none transition-colors placeholder:text-transparent focus:border-primary"
             id="message"
             name="message"
             placeholder="Tell me about your project"

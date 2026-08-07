@@ -10,7 +10,7 @@ export default function HomePage() {
     <main>
       <Hero />
       <FeaturedProjects projects={projects} />
-      <section className="container border-t border-outline-variant/20 pb-16 md:pb-24 pt-0">
+      <section className="container border-t border-outline-variant/20 pb-32 md:pb-40 pt-0">
         <div className="grid gap-8 md:grid-cols-2 md:gap-16">
           <div>
             <h2 className="mb-6 font-geist text-headline-md text-on-background-emphasis">About</h2>
@@ -23,7 +23,7 @@ export default function HomePage() {
           </div>
           <div className="flex items-start md:justify-end">
             <Link className="group inline-flex items-center gap-4 text-on-surface transition-colors hover:text-primary" href="/contact">
-              <span className="font-geist text-display-lg text-on-background-emphasis md:text-[56px]">Get in touch</span>
+              <span className="font-geist text-display-lg text-on-background-emphasis">Get in touch</span>
               <ArrowUpRight aria-hidden="true" className="size-10 transition-transform group-hover:rotate-45" />
             </Link>
           </div>

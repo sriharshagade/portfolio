@@ -1,7 +1,7 @@
 ﻿import Link from "next/link";
 
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { TechChip } from "@/components/ui/tech-chip";
 
 const capabilities = ["Business Discovery", "AI Prototyping", "LLM Evaluation", "Technical Direction"];
 
@@ -9,9 +9,9 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="technical-grid absolute inset-x-0 top-16 h-[520px] opacity-60" />
-      <div className="container relative z-10 pb-20 pt-4 md:pb-28 md:pt-6">
+      <div className="container relative z-10 pb-32 pt-4 md:pb-40 md:pt-6">
         <div className="max-w-[54rem] space-y-6">
-          <div className="space-y-5">
+          <div className="space-y-6">
             <h1 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl">
               Turning ambiguous business problems into validated AI solutions.
             </h1>
@@ -22,9 +22,9 @@ export function Hero() {
 
           <div className="flex flex-nowrap gap-2 overflow-x-auto md:overflow-x-visible">
             {capabilities.map((capability) => (
-              <TechChip key={capability} className="!bg-[#7c3aed] !text-[#ede0ff] !border-[#7c3aed] px-4 py-2.5 text-base font-semibold">
+              <Badge key={capability} variant="capability">
                 {capability}
-              </TechChip>
+              </Badge>
             ))}
           </div>
 

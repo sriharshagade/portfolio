@@ -2,6 +2,7 @@
 
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
+import { SPACING } from "@/constants/spacing";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,7 +18,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html className="dark" lang="en">
       <body>
         <Navbar />
-        <div className="pt-[72px] md:pt-[80px]">
+        <div className={`${SPACING.navbar.mobile} ${SPACING.navbar.desktop}`}>
           {children}
         </div>
         <Footer />

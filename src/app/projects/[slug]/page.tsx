@@ -70,7 +70,7 @@ export default async function ProjectCaseStudyPage({ params }: ProjectPageProps)
               <div className="md:col-span-9">
                 <h2 className="mb-4 font-geist text-headline-md text-on-background-emphasis">{section.title}</h2>
                 <p className="max-w-3xl text-body-lg text-on-surface-variant">{section.body}</p>
-                {section.bullets ? <ul className="mt-6 grid gap-3 md:grid-cols-3">{section.bullets.map((bullet) => <li className="rounded-lg border border-outline-variant/40 bg-surface-container p-4 font-mono text-sm text-secondary" key={bullet}>{bullet}</li>)}</ul> : null}
+                {section.bullets ? <ul className="mt-6 grid gap-3 md:grid-cols-3">{section.bullets.map((bullet) => <li className="rounded-lg border border-outline-variant/40 bg-surface-container p-4 font-mono text-sm text-on-surface-variant" key={bullet}>{bullet}</li>)}</ul> : null}
               </div>
             </article>
           ))}

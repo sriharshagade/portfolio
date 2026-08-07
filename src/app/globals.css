@@ -77,3 +77,8 @@ body {
   background-size: 40px 40px;
   mask-image: radial-gradient(ellipse at center, black 35%, transparent 78%);
 }
+
+/* Shared focus-visible ring for keyboard navigation */
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary;
+}

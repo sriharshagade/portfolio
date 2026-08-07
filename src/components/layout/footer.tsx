@@ -17,7 +17,7 @@ export function Footer() {
           <nav aria-label="Social links" className="flex flex-wrap gap-8">
             {socialLinks.map((item) => (
               <Link
-                className="font-mono text-label-mono text-on-surface-variant opacity-80 transition-colors hover:text-primary hover:opacity-100"
+                className="focus-ring font-mono text-label-mono text-on-surface-variant transition-colors hover:text-primary"
                 href={item.href}
                 key={item.label}
               >
@@ -27,7 +27,7 @@ export function Footer() {
           </nav>
         </div>
         <div className="border-t border-outline-variant/20 pt-8">
-          <p className="font-mono text-xs text-on-surface-variant">© {new Date().getFullYear()} Sriharsha Gade. AI Engineer bridging business and engineering.</p>
+          <p className="font-mono text-xs text-text-muted">© {new Date().getFullYear()} Sriharsha Gade. AI Engineer bridging business and engineering.</p>
         </div>
       </div>
     </footer>

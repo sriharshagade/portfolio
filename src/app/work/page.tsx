@@ -1,31 +1,42 @@
+import { PageHeader } from "@/components/ui/page-header";
+import { LabelTag } from "@/components/ui/label-tag";
+import { KeyContributions, type Contribution } from "@/components/sections/key-contributions";
+import { SPACING } from "@/constants/spacing";
+
 export const metadata = { title: "Work" };
 
 export default function WorkPage() {
-  const contributions = [
+  const contributions: Contribution[] = [
     {
       title: "Business Discovery",
       description: "Translating customer problems into technical solutions.",
+      detail: "Runs discovery sessions with stakeholders to unpack ambiguous requirements, then reframes them as concrete technical problems the team can act on.",
       isPrimary: true,
     },
     {
       title: "Product Thinking",
       description: "Rapid AI prototyping to validate ideas.",
+      detail: "Builds lightweight prototypes early to test assumptions before committing engineering time, using rapid iteration to validate or kill ideas quickly.",
     },
     {
       title: "AI Engineering",
       description: "Developing production-ready APIs and services.",
+      detail: "Designs and ships production APIs and services that power AI features, with attention to reliability, latency, and maintainability.",
     },
     {
       title: "Technical Documentation",
       description: "Writing PRDs and technical specifications.",
+      detail: "Writes PRDs, technical specs, and API documentation that keep engineering, product, and stakeholders aligned on scope and implementation details.",
     },
     {
       title: "Stakeholder Collaboration",
       description: "Aligning engineering with product and business.",
+      detail: "Works across product, design, and engineering to keep priorities aligned, surfacing tradeoffs early and translating technical constraints for non-technical stakeholders.",
     },
     {
       title: "Product Delivery",
       description: "Supporting deployment and continuous improvement.",
+      detail: "Supports releases end-to-end, from deployment through post-launch monitoring, and iterates based on real usage and feedback.",
     },
   ];
 
@@ -53,23 +64,23 @@ export default function WorkPage() {
   return (
     <main className="container pb-32 md:pb-40">
       {/* Header */}
-      <header className="mb-16">
-        <div className="font-mono text-label-mono text-primary mb-4">PRIMARY EXPERIENCE // JAN 2024 – PRESENT</div>
-        <h1 className="font-geist text-display-xl-mobile md:text-display-xl text-on-background-emphasis mb-8">
-          Building AI Products at Kirusa
-        </h1>
+      <div className={`mb-16 ${SPACING.hierarchy.majorBreak}`}>
+        <PageHeader
+          label="PRIMARY EXPERIENCE // JAN 2024 – PRESENT"
+          title="Building AI Products at Kirusa"
+        />
         <div className="h-px bg-outline-variant/50 w-full" />
-      </header>
+      </div>
 
       {/* Two Column Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
         {/* Left Column */}
-        <div className="lg:col-span-8 flex flex-col gap-16">
+        <div className="md:col-span-8 flex flex-col gap-16">
           {/* The Role */}
           <section>
             <div className="flex items-center gap-2 mb-6">
               <span className="w-2 h-2 bg-primary" />
-              <h2 className="font-mono text-label-mono text-on-surface-variant tracking-widest uppercase">The Role</h2>
+              <h2><LabelTag variant="secondary">The Role</LabelTag></h2>
             </div>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
               I contribute to AI-powered products by combining business discovery, AI engineering, backend development,
@@ -82,7 +93,7 @@ export default function WorkPage() {
           <section>
             <div className="flex items-center gap-2 mb-6">
               <span className="w-2 h-2 bg-primary" />
-              <h2 className="font-mono text-label-mono text-on-surface-variant tracking-widest uppercase">Product Work</h2>
+              <h2><LabelTag variant="secondary">Product Work</LabelTag></h2>
             </div>
             <div className="flex flex-col gap-6">
               {projects.map((project) => (
@@ -98,32 +109,26 @@ export default function WorkPage() {
         </div>
 
         {/* Right Column */}
-        <div className="lg:col-span-4 flex flex-col gap-12">
-          {/* Key Contributions */}
-          <div>
-            <h3 className="font-mono text-label-mono text-on-surface-variant tracking-widest uppercase mb-6">
-              Key Contributions
-            </h3>
-            <div className="flex flex-col gap-4">
-              {contributions.map((contribution) => (
-                <div
-                  key={contribution.title}
-                  className={`border-l-2 pl-4 py-2 ${
-                    contribution.isPrimary
-                      ? "border-primary bg-surface-container-lowest/50"
-                      : "border-outline-variant hover:border-primary transition-colors bg-surface-container-lowest/50"
-                  }`}
-                >
-                  <h4 className="font-headline-sm text-headline-sm text-on-background-emphasis mb-1">
-                    {contribution.title}
-                  </h4>
-                  <p className="font-body-md text-body-md text-on-surface-variant text-sm">{contribution.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className="md:col-span-4 flex flex-col gap-12">
+          <KeyContributions contributions={contributions} />
         </div>
       </div>
+
+      {/* Prior Experience Section */}
+      <section className="mt-24 pt-16 border-t border-outline-variant/30">
+        <div className="font-mono text-label-mono text-on-surface-variant mb-6">PRIOR EXPERIENCE // AUG 2021 – OCT 2022</div>
+        <div className="max-w-3xl space-y-6">
+          <div>
+            <h2 className="font-headline-md text-headline-md text-on-background-emphasis mb-2">
+              Trainee Software Engineer
+            </h2>
+            <p className="font-body-md text-body-md text-on-surface-variant">Innominds</p>
+          </div>
+          <p className="font-body-lg text-body-lg text-on-surface-variant">
+            Worked on business intelligence and data engineering solutions, developing data pipelines, dashboards, and reporting systems for enterprise clients. Collaborated with cross-functional teams to improve data quality, automate reporting workflows, and support data-driven decision-making.
+          </p>
+        </div>
+      </section>
     </main>
   );
 }

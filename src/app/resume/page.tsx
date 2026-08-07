@@ -2,6 +2,7 @@ import { Download, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
+import { PageHeader } from "@/components/ui/page-header";
 
 export const metadata = { title: "Resume" };
 
@@ -11,17 +12,13 @@ export default function ResumePage() {
 
   return (
     <main>
-      <section className="container pb-16">
+      <section className="container pb-32 md:pb-40">
         <div className="max-w-2xl space-y-8">
           {/* Hero */}
-          <div className="space-y-4">
-            <h1 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl">
-              Resume
-            </h1>
-            <p className="text-body-md text-on-surface-variant">
-              AI Product Engineer building production AI systems from business discovery to deployment.
-            </p>
-          </div>
+          <PageHeader
+            title="Resume"
+            description="AI Product Engineer building production AI systems from business discovery to deployment."
+          />
 
           {/* Primary Actions */}
           <div className="flex flex-wrap gap-4">
@@ -57,14 +54,14 @@ export default function ResumePage() {
               </p>
               <div className="flex flex-col gap-3 pt-2">
                 <Link
-                  className="inline-flex items-center gap-2 text-body-md text-primary transition-colors hover:text-on-background-emphasis"
+                  className="focus-ring inline-flex items-center gap-2 text-body-md text-primary transition-colors hover:text-on-background-emphasis"
                   href="/projects"
                 >
                   Explore Projects
                   <ArrowRight aria-hidden="true" className="size-4" />
                 </Link>
                 <Link
-                  className="inline-flex items-center gap-2 text-body-md text-primary transition-colors hover:text-on-background-emphasis"
+                  className="focus-ring inline-flex items-center gap-2 text-body-md text-primary transition-colors hover:text-on-background-emphasis"
                   href="/about"
                 >
                   About Me

@@ -9,10 +9,10 @@ export default function AboutPage() {
   return (
     <main>
       <section className="relative overflow-hidden">
-        <div className="container relative z-10 pb-16 pt-4 md:pb-20 md:pt-6">
-          <div className="grid gap-gutter lg:grid-cols-12 items-start">
-            <div className="lg:col-span-6 space-y-6">
-              <div className="space-y-5">
+        <div className="container relative z-10 pb-32 pt-4 md:pb-40 md:pt-6">
+          <div className="grid gap-gutter md:grid-cols-12 items-start">
+            <div className="md:col-span-6 space-y-6">
+              <div className="space-y-6">
                 <h1 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl">
                   I enjoy solving difficult business problems with AI.
                 </h1>
@@ -28,7 +28,7 @@ export default function AboutPage() {
                 <span>Bengaluru, India</span>
               </div>
             </div>
-            <div className="lg:col-span-5 flex items-start">
+            <div className="md:col-span-5 flex items-start">
               <div className="group relative aspect-[3/4] w-full max-h-[600px] md:max-h-none overflow-hidden rounded-lg border border-outline-variant/50 bg-surface-container">
                 <Image alt="Sriharsha Gade portrait" className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0" fill sizes="(min-width: 1024px) 34vw, 100vw" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmxjUW0qqhhtU7ITppe5YzM6RbK_igeUsRpxqZvi4KFdmFtlqhS0p7PLtDOEGYswKb3SLxhS1wjbzPY2eFJW_MUUVl_UGrmGnWPZVoEEDrzjaNmcI7VQBGNOZHV2nrFAio9o10bpX5cmnGqpG4sQjUoBmzpgmp9oB0JaXW02kuToxfKSwvNqoj5vslrqtMeUyOTh8IIDK57P-WyM_6oV8pRYJHBBs30BVOAAchMcYIkp4KzDUZgq2JoTwpuf80T9NLbGKem9DuShvQG-M" />
                 <span className="absolute bottom-4 right-4 rounded border border-outline-variant bg-surface/90 px-3 py-1 font-mono text-xs text-primary backdrop-blur">IMG_01</span>
