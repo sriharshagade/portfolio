@@ -1,18 +1,6 @@
 export const metadata = { title: "Work" };
 
 export default function WorkPage() {
-  const focusAreas = [
-    "Business Discovery",
-    "Product Thinking",
-    "AI Engineering",
-    "Backend Development",
-    "Rapid Prototyping",
-    "Technical Documentation",
-    "UI/UX Collaboration",
-    "Stakeholder Management",
-    "Production Delivery",
-  ];
-
   const contributions = [
     {
       title: "Business Discovery",
@@ -111,21 +99,6 @@ export default function WorkPage() {
 
         {/* Right Column */}
         <div className="lg:col-span-4 flex flex-col gap-12">
-          {/* Focus Areas */}
-          <div className="border border-outline-variant/50 bg-surface-container-low p-8 rounded-lg">
-            <h3 className="font-mono text-label-mono text-on-surface-variant tracking-widest uppercase mb-6">
-              Focus Areas
-            </h3>
-            <div className="flex flex-col gap-3">
-              {focusAreas.map((area) => (
-                <span key={area} className="font-mono text-label-mono text-primary flex items-center gap-2">
-                  <span className="w-1 h-1 bg-primary inline-block" />
-                  {area}
-                </span>
-              ))}
-            </div>
-          </div>
-
           {/* Key Contributions */}
           <div>
             <h3 className="font-mono text-label-mono text-on-surface-variant tracking-widest uppercase mb-6">
