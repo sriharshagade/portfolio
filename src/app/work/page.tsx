@@ -1,5 +1,3 @@
-import { PageHeader } from "@/components/ui/page-header";
-import { LabelTag } from "@/components/ui/label-tag";
 import { KeyContributions, type Contribution } from "@/components/sections/key-contributions";
 import { SPACING } from "@/constants/spacing";
 
@@ -68,7 +66,7 @@ export default function WorkPage() {
         <div className="space-y-4">
           <div className="font-mono text-label-mono text-primary">PRIMARY EXPERIENCE</div>
           <div className="space-y-2">
-            <h1 className="font-geist text-headline-md text-on-background-emphasis">
+            <h1 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl">
               AI/ML Engineer
             </h1>
             <p className="font-geist text-body-md text-on-background-emphasis">Kirusa</p>
@@ -118,7 +116,7 @@ export default function WorkPage() {
         <div className="font-mono text-label-mono text-primary mb-6">PRIOR EXPERIENCE</div>
         <div className="max-w-3xl space-y-6">
           <div className="space-y-2">
-            <h2 className="font-geist text-headline-md text-on-background-emphasis">
+            <h2 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl">
               Trainee Software Engineer
             </h2>
             <p className="font-geist text-body-md text-on-background-emphasis">Innominds</p>

@@ -52,7 +52,7 @@ export function Navbar() {
             );
           })}
         </nav>
-        <Button asChild className="hidden md:inline-flex" variant="outline">
+        <Button asChild className="hidden md:inline-flex" variant="secondary">
           <Link href="/contact">Connect</Link>
         </Button>
         <button

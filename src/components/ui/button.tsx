@@ -9,13 +9,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        outline: "border border-on-surface text-on-surface hover:bg-on-surface hover:text-surface",
-        primary: "border border-primary bg-primary text-on-primary hover:bg-primary/90",
-        ghost: "text-on-surface-variant hover:text-primary",
+        primary: "bg-primary text-on-primary hover:bg-primary/90",
+        secondary: "border border-on-surface text-on-surface hover:bg-on-surface hover:text-surface",
+        tertiary: "h-auto px-0 gap-1.5 justify-start text-primary hover:text-on-background-emphasis",
       },
       size: { default: "h-10 px-6", lg: "h-12 px-8", icon: "size-10 px-0" },
     },
-    defaultVariants: { variant: "outline", size: "default" },
+    defaultVariants: { variant: "secondary", size: "default" },
   },
 );
 

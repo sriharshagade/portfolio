@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-import { LabelTag } from "@/components/ui/label-tag";
-
 export type Contribution = {
   title: string;
   description: string;

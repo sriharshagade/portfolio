@@ -14,7 +14,7 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
           {/* Full-card clickable overlay */}
           <Link href={`/projects/${project.slug}`} className="focus-ring absolute inset-0 z-10 rounded-xl" aria-label={`View ${project.name} case study`} />
 
-          <div className="pointer-events-none absolute right-4 top-4 z-20"><Badge pulse={project.status !== "Archived"}>{project.status}</Badge></div>
+          <div className="pointer-events-none absolute right-4 top-4 z-20"><Badge>{project.status}</Badge></div>
           <div className="relative h-56 shrink-0 overflow-hidden bg-surface-variant">
             <Image alt={project.imageAlt} className="object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" fill sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" src={project.image} />
           </div>

@@ -29,22 +29,22 @@ export default async function ProjectCaseStudyPage({ params }: ProjectPageProps)
     <main className="pt-16">
       <section className="container flex min-h-[840px] flex-col items-center justify-center py-20 text-center">
         <div className="max-w-6xl space-y-8">
-          <p className="font-mono text-label-mono text-primary border border-primary/40 px-2 py-1 rounded-sm inline-block">{project.category}</p>
+          <p className="font-mono text-label-mono text-primary">{project.category}</p>
           <h1 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl">{project.name}</h1>
           <p className="mx-auto max-w-2xl text-body-lg text-on-surface-variant">{project.headline}</p>
           <div className="flex flex-wrap justify-center gap-3">
-            {project.stack.map((tech) => <TechChip className="bg-surface-container-high" key={tech}>{tech}</TechChip>)}
+            {project.stack.map((tech) => <TechChip key={tech}>{tech}</TechChip>)}
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {project.demoUrl && (
-              <Button asChild>
+              <Button asChild variant="primary">
                 <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                   <LinkIcon aria-hidden="true" className="size-4" />Demo
                 </a>
               </Button>
             )}
             {project.showGithubLink !== false && (
-              <Button variant="ghost"><Github aria-hidden="true" className="size-4" />GitHub</Button>
+              <Button variant="secondary"><Github aria-hidden="true" className="size-4" />GitHub</Button>
             )}
           </div>
           <div className="relative mx-auto aspect-video w-full max-w-5xl overflow-hidden rounded-xl border-4 border-surface-container-high bg-surface-container">

@@ -26,7 +26,7 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
                 <div className="mb-4 flex items-center gap-3">
                   <Icon aria-hidden="true" className="size-8 text-primary" />
                   <h3 className="font-geist text-headline-md text-on-background-emphasis">{project.name}</h3>
-                  <span className="pointer-events-none ml-auto"><Badge pulse={project.status !== "Archived"}>{project.status}</Badge></span>
+                  <span className="pointer-events-none ml-auto"><Badge>{project.status}</Badge></span>
                 </div>
                 <p className="mb-6 text-body-lg text-on-surface-variant">{project.summary}</p>
                 <div className="mb-8 flex flex-wrap gap-2">
@@ -40,7 +40,7 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
                       </span>
                     ))}
                   </div>
-                  <div className="relative z-30 inline-flex items-center gap-2 font-mono text-sm text-on-surface transition-all group-hover:translate-x-1 group-hover:text-primary">
+                  <div className="relative z-30 inline-flex items-center gap-2 font-mono text-sm text-primary transition-all group-hover:translate-x-1 group-hover:text-on-background-emphasis">
                     View Case Study <ArrowRight aria-hidden="true" className="size-4" />
                   </div>
                 </div>

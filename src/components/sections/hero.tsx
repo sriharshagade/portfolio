@@ -22,17 +22,17 @@ export function Hero() {
 
           <div className="flex flex-nowrap gap-2 overflow-x-auto md:overflow-x-visible">
             {capabilities.map((capability) => (
-              <Badge key={capability} variant="status" pulse={false}>
+              <Badge key={capability} variant="capability">
                 {capability}
               </Badge>
             ))}
           </div>
 
           <div className="flex flex-wrap gap-4 pt-3">
-            <Button asChild size="lg">
+            <Button asChild size="lg" variant="primary">
               <Link href="/projects">View Case Studies</Link>
             </Button>
-            <Button asChild size="lg" variant="ghost">
+            <Button asChild size="lg" variant="secondary">
               <Link href="/resume">Resume</Link>
             </Button>
           </div>

@@ -1,8 +1,9 @@
 import { Download, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { PageHeader } from "@/components/ui/page-header";
+import { cn } from "@/lib/utils";
 
 export const metadata = { title: "Resume" };
 
@@ -28,7 +29,7 @@ export default function ResumePage() {
                 Download Resume
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" variant="secondary">
               <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
                 View Resume Online
               </a>
@@ -54,21 +55,21 @@ export default function ResumePage() {
               </p>
               <div className="flex flex-col gap-3 pt-2">
                 <Link
-                  className="focus-ring inline-flex items-center gap-2 text-body-md text-primary transition-colors hover:text-on-background-emphasis"
+                  className={cn(buttonVariants({ variant: "tertiary", size: "default" }))}
                   href="/projects"
                 >
                   Explore Projects
                   <ArrowRight aria-hidden="true" className="size-4" />
                 </Link>
                 <Link
-                  className="focus-ring inline-flex items-center gap-2 text-body-md text-primary transition-colors hover:text-on-background-emphasis"
+                  className={cn(buttonVariants({ variant: "tertiary", size: "default" }))}
                   href="/work"
                 >
                   Work
                   <ArrowRight aria-hidden="true" className="size-4" />
                 </Link>
                 <Link
-                  className="focus-ring inline-flex items-center gap-2 text-body-md text-primary transition-colors hover:text-on-background-emphasis"
+                  className={cn(buttonVariants({ variant: "tertiary", size: "default" }))}
                   href="/about"
                 >
                   About Me

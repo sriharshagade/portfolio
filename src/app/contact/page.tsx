@@ -1,5 +1,5 @@
 ﻿import { FileText, Github, Linkedin, MapPin, MessageCircle, Mail, type LucideIcon } from "lucide-react";
-import Image from "next/image";
+import { ImWhatsapp } from "react-icons/im";
 
 import { ContactForm } from "@/components/sections/contact-form";
 import { PageHeader } from "@/components/ui/page-header";
@@ -7,9 +7,9 @@ import { LabelTag } from "@/components/ui/label-tag";
 import { TechChip } from "@/components/ui/tech-chip";
 
 const focusAreas = ["AI Products", "Developer Tools", "SaaS", "Healthcare Tech", "Product Engineering", "Automation"];
-const socials: Array<{ label: string; icon?: LucideIcon; isCustom?: boolean; href: string }> = [
+const socials: Array<{ label: string; icon?: LucideIcon | typeof ImWhatsapp; href: string }> = [
   { label: "Email", icon: Mail, href: "mailto:hello@sriharshagade.com" },
-  { label: "WhatsApp", isCustom: true, href: "https://wa.me/918297997929" },
+  { label: "WhatsApp", icon: ImWhatsapp, href: "https://wa.me/918297997929" },
   { label: "LinkedIn", icon: Linkedin, href: "https://in.linkedin.com/in/sriharshagade" },
   { label: "GitHub", icon: Github, href: "https://github.com/sriharshagade" },
   { label: "Resume", icon: FileText, href: "https://drive.google.com/uc?export=download&id=1KvybdGDfAKJafryX19tqAxS6IMc4rrrq" },
@@ -46,22 +46,14 @@ export default function ContactPage() {
             <p className="mb-4"><LabelTag>Socials</LabelTag></p>
             <div className="flex gap-6">
               {socials.map((item) => {
-                if (item.isCustom) {
-                  return (
-                    <a className="focus-ring flex flex-col items-center gap-1 rounded-sm text-on-surface-variant transition-colors hover:text-primary group" href={item.href} key={item.label}>
-                      <svg className="size-5 text-on-surface-variant group-hover:text-primary transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M3 21l1.65-5.27A9 9 0 1 1 19.07 3.34"/>
-                        <path d="M9 10a1 1 0 1 1 2 0a1 1 0 0 1 -2 0"/>
-                        <path d="M12 13a1 1 0 1 1 2 0a1 1 0 0 1 -2 0"/>
-                        <path d="M15 10a1 1 0 1 1 2 0a1 1 0 0 1 -2 0"/>
-                      </svg>
-                      <span className="font-mono text-micro">{item.label}</span>
-                    </a>
-                  );
-                }
                 if (!item.icon) return null;
                 const Icon = item.icon;
-                return <a className="focus-ring flex flex-col items-center gap-1 rounded-sm text-on-surface-variant transition-colors hover:text-primary" href={item.href} key={item.label}><Icon className="size-5" /><span className="font-mono text-micro">{item.label}</span></a>;
+                return (
+                  <a className="focus-ring flex flex-col items-center gap-1 rounded-sm text-on-surface-variant transition-colors hover:text-primary" href={item.href} key={item.label}>
+                    <Icon className="size-5" />
+                    <span className="font-mono text-micro">{item.label}</span>
+                  </a>
+                );
               })}
             </div>
           </section>
