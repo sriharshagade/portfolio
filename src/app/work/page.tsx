@@ -69,7 +69,7 @@ export default function WorkPage() {
             <h1 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl">
               AI/ML Engineer
             </h1>
-            <p className="font-geist text-body-md text-on-background-emphasis">Kirusa</p>
+            <p className="font-geist text-body-lg text-on-background-emphasis">Kirusa</p>
           </div>
         </div>
         <div className="h-px bg-outline-variant/50 w-full mt-6" />
@@ -116,7 +116,7 @@ export default function WorkPage() {
         <div className="font-mono text-label-mono text-primary mb-6">PRIOR EXPERIENCE</div>
         <div className="max-w-3xl space-y-6">
           <div className="space-y-2">
-            <h2 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl">
+            <h2 className="font-geist text-headline-md text-on-background-emphasis">
               Trainee Software Engineer
             </h2>
             <p className="font-geist text-body-md text-on-background-emphasis">Innominds</p>
