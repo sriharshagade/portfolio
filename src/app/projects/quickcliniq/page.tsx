@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Link as LinkIcon, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { quickcliniqCaseStudy } from "@/data/quickcliniq-case-study";
 import { getProject } from "@/data/projects";
@@ -15,64 +14,52 @@ export default function QuickCliniqCaseStudy() {
   return (
     <main className="pt-16">
       {/* ===== HERO ===== */}
-      <section className="container py-16 md:py-24">
-        <div className="space-y-8">
-          <div className="space-y-4">
+      <section className="container pb-16 md:pb-20">
+        <div className="space-y-6">
+          <div className="space-y-3">
             <p className="font-mono text-label-mono text-primary">{quickcliniqCaseStudy.category}</p>
-            <h1 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl">
-              {quickcliniqCaseStudy.name}
-            </h1>
+            <div className="flex items-start justify-between gap-4">
+              <h1 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl flex-1">
+                {quickcliniqCaseStudy.name}
+              </h1>
+              <div className="flex items-center gap-3 flex-shrink-0 pt-2">
+                <Badge variant="status">{quickcliniqCaseStudy.status}</Badge>
+                {quickcliniqCaseStudy.demoUrl && (
+                  <Link
+                    href={quickcliniqCaseStudy.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-body-md text-primary hover:text-on-background-emphasis transition-colors"
+                  >
+                    Demo ↗
+                  </Link>
+                )}
+              </div>
+            </div>
             <p className="text-body-lg text-on-surface-variant max-w-3xl">{quickcliniqCaseStudy.tagline}</p>
           </div>
 
-          {/* Metadata */}
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 py-8 border-y border-outline-variant/30">
-            <div>
-              <p className="font-mono text-micro uppercase tracking-wider text-on-surface-variant mb-2">Role</p>
-              <p className="text-body-md text-on-background-emphasis">{quickcliniqCaseStudy.role.official}</p>
-            </div>
-            <div>
-              <p className="font-mono text-micro uppercase tracking-wider text-on-surface-variant mb-2">Scope</p>
-              <p className="text-body-md text-on-background-emphasis">{quickcliniqCaseStudy.role.projectScope}</p>
-            </div>
-            <div>
-              <p className="font-mono text-micro uppercase tracking-wider text-on-surface-variant mb-2">Status</p>
-              <Badge variant="status">{quickcliniqCaseStudy.status}</Badge>
-            </div>
-          </div>
-
           {/* Hero Image */}
-          <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-outline-variant/30 bg-surface-container">
+          <div className="relative w-full max-w-4xl overflow-hidden rounded-lg border border-outline-variant/30 bg-surface-container mx-auto mt-6">
             <Image
               alt={quickcliniqCaseStudy.imageAlt}
-              className="object-cover"
-              fill
+              className="w-full h-auto"
+              width={960}
+              height={600}
               priority
               sizes="(min-width: 1024px) 960px, 100vw"
               src={quickcliniqCaseStudy.image}
             />
           </div>
-
-          {/* CTA */}
-          {quickcliniqCaseStudy.demoUrl && (
-            <div className="flex flex-wrap gap-4">
-              <Button asChild variant="primary">
-                <a href={quickcliniqCaseStudy.demoUrl} target="_blank" rel="noopener noreferrer">
-                  <LinkIcon aria-hidden="true" className="size-4" />
-                  View Live Demo
-                </a>
-              </Button>
-            </div>
-          )}
         </div>
       </section>
 
       {/* ===== WHAT I BUILT ===== */}
-      <section className="container py-16 md:py-24 border-t border-outline-variant/30">
-        <div className="space-y-12">
-          <div>
-            <p className="font-mono text-label-mono text-primary mb-4">Product Capabilities</p>
+      <section className="container py-12 md:py-16 border-t border-outline-variant/30">
+        <div className="space-y-8">
+          <div className="space-y-2">
             <h2 className="font-geist text-headline-md text-on-background-emphasis">What I Built</h2>
+            <p className="text-body-md text-on-surface-variant">A production clinic operations platform connecting WhatsApp patient communication with scheduling and clinic workflows.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -90,11 +77,11 @@ export default function QuickCliniqCaseStudy() {
       </section>
 
       {/* ===== THE PROBLEM ===== */}
-      <section className="container py-16 md:py-24 border-t border-outline-variant/30">
+      <section className="container py-12 md:py-16 border-t border-outline-variant/30">
         <div className="max-w-3xl space-y-6">
-          <div>
-            <p className="font-mono text-label-mono text-primary mb-4">Context</p>
+          <div className="space-y-2">
             <h2 className="font-geist text-headline-md text-on-background-emphasis">The Problem</h2>
+            <p className="text-body-md text-on-surface-variant">Clinics waste hours on manual scheduling and fragmented communication across multiple tools.</p>
           </div>
           <p className="text-body-lg text-on-surface-variant">{quickcliniqCaseStudy.problem.statement}</p>
           <p className="text-body-md text-on-surface-variant">{quickcliniqCaseStudy.problem.context}</p>
@@ -106,22 +93,11 @@ export default function QuickCliniqCaseStudy() {
       </section>
 
       {/* ===== HOW IT WORKS ===== */}
-      <section className="container py-16 md:py-24 border-t border-outline-variant/30">
-        <div className="space-y-12">
-          <div>
-            <p className="font-mono text-label-mono text-primary mb-4">Workflow</p>
+      <section className="container py-12 md:py-16 border-t border-outline-variant/30">
+        <div className="space-y-8">
+          <div className="space-y-2">
             <h2 className="font-geist text-headline-md text-on-background-emphasis">{quickcliniqCaseStudy.workflow.title}</h2>
-          </div>
-
-          {/* Workflow Visual */}
-          <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-outline-variant/30 bg-surface-container">
-            <Image
-              alt={quickcliniqCaseStudy.imageAlt}
-              className="object-cover"
-              fill
-              sizes="(min-width: 1024px) 960px, 100vw"
-              src={quickcliniqCaseStudy.image}
-            />
+            <p className="text-body-md text-on-surface-variant">A 5-step workflow from patient WhatsApp message to confirmed appointment in the clinic dashboard.</p>
           </div>
 
           {/* Workflow Steps */}
@@ -147,12 +123,11 @@ export default function QuickCliniqCaseStudy() {
       </section>
 
       {/* ===== SYSTEM ARCHITECTURE ===== */}
-      <section className="container py-16 md:py-24 border-t border-outline-variant/30">
-        <div className="space-y-12">
-          <div>
-            <p className="font-mono text-label-mono text-primary mb-4">Technical</p>
+      <section className="container py-12 md:py-16 border-t border-outline-variant/30">
+        <div className="space-y-8">
+          <div className="space-y-2">
             <h2 className="font-geist text-headline-md text-on-background-emphasis">{quickcliniqCaseStudy.architecture.title}</h2>
-            <p className="text-body-md text-on-surface-variant mt-4 max-w-3xl">{quickcliniqCaseStudy.architecture.description}</p>
+            <p className="text-body-md text-on-surface-variant">{quickcliniqCaseStudy.architecture.description}</p>
           </div>
 
           <div className="space-y-4">
@@ -176,11 +151,11 @@ export default function QuickCliniqCaseStudy() {
       </section>
 
       {/* ===== ENGINEERING DECISIONS ===== */}
-      <section className="container py-16 md:py-24 border-t border-outline-variant/30">
-        <div className="space-y-12">
-          <div>
-            <p className="font-mono text-label-mono text-primary mb-4">Implementation</p>
-            <h2 className="font-geist text-headline-md text-on-background-emphasis">Key Engineering Decisions</h2>
+      <section className="container py-12 md:py-16 border-t border-outline-variant/30">
+        <div className="space-y-8">
+          <div className="space-y-2">
+            <h2 className="font-geist text-headline-md text-on-background-emphasis">Engineering Decisions</h2>
+            <p className="text-body-md text-on-surface-variant">Key design and implementation choices that shaped how the system was built.</p>
           </div>
 
           <div className="space-y-6">
@@ -204,13 +179,15 @@ export default function QuickCliniqCaseStudy() {
       </section>
 
       {/* ===== MY ROLE ===== */}
-      <section className="container py-16 md:py-24 border-t border-outline-variant/30">
-        <div className="space-y-12">
-          <div>
-            <p className="font-mono text-label-mono text-primary mb-4">Ownership</p>
+      <section className="container py-12 md:py-16 border-t border-outline-variant/30">
+        <div className="space-y-8">
+          <div className="space-y-3">
             <h2 className="font-geist text-headline-md text-on-background-emphasis">My Role</h2>
-            <p className="text-body-lg text-on-surface-variant mt-4">
-              {quickcliniqCaseStudy.role.official} · {quickcliniqCaseStudy.role.projectScope}
+            <p className="text-body-lg text-on-background-emphasis">
+              {quickcliniqCaseStudy.role.official}
+            </p>
+            <p className="text-body-md text-on-surface-variant">
+              {quickcliniqCaseStudy.role.projectScope} across the full technology stack.
             </p>
           </div>
 
@@ -226,22 +203,11 @@ export default function QuickCliniqCaseStudy() {
       </section>
 
       {/* ===== CHALLENGES ===== */}
-      <section className="container py-16 md:py-24 border-t border-outline-variant/30">
-        <div className="space-y-12">
-          {/* Product Visual */}
-          <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-outline-variant/30 bg-surface-container">
-            <Image
-              alt={quickcliniqCaseStudy.imageAlt}
-              className="object-cover"
-              fill
-              sizes="(min-width: 1024px) 960px, 100vw"
-              src={quickcliniqCaseStudy.image}
-            />
-          </div>
-
-          <div>
-            <p className="font-mono text-label-mono text-primary mb-4">Learning</p>
-            <h2 className="font-geist text-headline-md text-on-background-emphasis">Challenges & Solutions</h2>
+      <section className="container py-12 md:py-16 border-t border-outline-variant/30">
+        <div className="space-y-8">
+          <div className="space-y-2">
+            <h2 className="font-geist text-headline-md text-on-background-emphasis">Challenges</h2>
+            <p className="text-body-md text-on-surface-variant">Real problems encountered during implementation and how they were solved.</p>
           </div>
 
           <div className="space-y-8">
@@ -269,11 +235,11 @@ export default function QuickCliniqCaseStudy() {
       </section>
 
       {/* ===== KEY LEARNINGS ===== */}
-      <section className="container py-16 md:py-24 border-t border-outline-variant/30">
+      <section className="container py-12 md:py-16 border-t border-outline-variant/30">
         <div className="space-y-8">
-          <div>
-            <p className="font-mono text-label-mono text-primary mb-4">Outcome</p>
-            <h2 className="font-geist text-headline-md text-on-background-emphasis">What I Learned</h2>
+          <div className="space-y-2">
+            <h2 className="font-geist text-headline-md text-on-background-emphasis">Key Learnings</h2>
+            <p className="text-body-md text-on-surface-variant">Core insights from building a production AI-powered clinic platform.</p>
           </div>
 
           <ul className="space-y-3">
@@ -289,12 +255,12 @@ export default function QuickCliniqCaseStudy() {
 
       {/* ===== NEXT CASE STUDY ===== */}
       {nextProject && (
-        <section className="container py-16 md:py-24 border-t border-outline-variant/30 mt-8">
+        <section className="container py-12 md:py-16 border-t border-outline-variant/30">
           <div className="max-w-2xl">
-            <p className="font-mono text-label-mono text-primary mb-8">Next Case Study</p>
+            <p className="font-mono text-label-mono text-on-surface-variant mb-6">Next</p>
             <Link
               href={`/projects/${nextProject.slug}`}
-              className="group block p-6 rounded-xl border border-outline-variant/30 bg-surface-container hover:border-primary/50 transition-colors"
+              className="group block p-6 rounded-lg border border-outline-variant/30 bg-surface-container/30 hover:border-primary/50 transition-colors"
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
