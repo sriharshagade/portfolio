@@ -40,9 +40,9 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
                       </span>
                     ))}
                   </div>
-                  <div className="relative z-30 inline-flex items-center gap-2 font-mono text-sm text-primary transition-all group-hover:translate-x-1 group-hover:text-on-background-emphasis">
+                  <Link href={`/projects/${project.slug}`} className="focus-ring relative z-30 inline-flex items-center gap-2 font-mono text-sm text-primary transition-all hover:translate-x-1 hover:text-on-background-emphasis">
                     View Case Study <ArrowRight aria-hidden="true" className="size-4" />
-                  </div>
+                  </Link>
                 </div>
               </div>
             </article>

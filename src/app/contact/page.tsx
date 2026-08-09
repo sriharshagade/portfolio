@@ -31,7 +31,7 @@ export default function ContactPage() {
           </div>
           <ContactForm />
         </section>
-        <aside className="mt-16 flex flex-col gap-10 border-t border-outline-variant/30 pt-10 md:col-span-5 md:mt-0 md:border-l md:border-t-0 md:pl-12 md:pt-0">
+        <aside className="mt-8 flex flex-col gap-8 md:gap-10 border-t border-outline-variant/30 pt-8 md:pt-10 md:col-span-5 md:mt-0 md:border-l md:border-t-0 md:pl-12">
           <section className="border-b border-outline-variant/30 pb-8">
             <p className="mb-4"><LabelTag>Direct Contact</LabelTag></p>
             <a className="focus-ring block font-geist text-headline-sm transition-colors hover:text-primary" href="mailto:hello@sriharshagade.com">hello@sriharshagade.com</a>
@@ -44,7 +44,7 @@ export default function ContactPage() {
           </section>
           <section className="border-b border-outline-variant/30 pb-8">
             <p className="mb-4"><LabelTag>Socials</LabelTag></p>
-            <div className="flex gap-6">
+            <div className="flex flex-wrap gap-4 md:gap-6">
               {socials.map((item) => {
                 if (!item.icon) return null;
                 const Icon = item.icon;
