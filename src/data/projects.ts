@@ -13,6 +13,7 @@ export type Project = {
   icon: LucideIcon;
   demoUrl?: string;
   showGithubLink?: boolean;
+  metadata?: { role: string[]; scope: string };
   sections: Array<{ eyebrow: string; title: string; body: string; bullets?: string[] }>;
 };
 
@@ -46,6 +47,10 @@ export const projects: Project[] = [
     icon: Activity,
     demoUrl: "https://quickcliniq.com/",
     showGithubLink: false,
+    metadata: {
+      role: ["AI/ML Engineering", "Product Engineering"],
+      scope: "AI + SaaS",
+    },
     sections: caseSections("QuickCliniq", "Healthcare operations"),
   },
   {
@@ -59,6 +64,10 @@ export const projects: Project[] = [
     imageAlt: "Dark recruiting analytics interface with parsed candidate data and structured evaluation output.",
     stack: ["FastAPI", "LLM Evaluation", "Docker", "AWS"],
     icon: BriefcaseBusiness,
+    metadata: {
+      role: ["Product Engineering", "ML Engineering"],
+      scope: "AI + Evaluation",
+    },
     sections: caseSections("HireSense", "Recruiting teams"),
   },
 ];
