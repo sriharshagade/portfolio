@@ -2,7 +2,7 @@ export const quickcliniqCaseStudy = {
   name: "QuickCliniq",
   tagline: "WhatsApp-first clinic management for patient intake, scheduling, and operations.",
   category: "Healthcare AI Workflow",
-  status: "Production" as const,
+  status: "Fully Built · Pre-Launch" as const,
   image: "/quickcliniq_hero.png",
   imageAlt: "QuickCliniq dashboard interface showing appointment management and clinical workflow.",
   demoUrl: "https://quickcliniq.com/",
@@ -25,40 +25,41 @@ export const quickcliniqCaseStudy = {
   capabilities: [
     {
       id: "whatsapp-workflows",
-      title: "WhatsApp Appointment Flows",
-      description: "Patients book, reschedule, and cancel appointments directly through WhatsApp with guided conversation flows.",
+      title: "WhatsApp Appointment Automation",
+      description: "Patients can discover availability, book appointments, reschedule, and receive confirmations directly through WhatsApp.",
     },
     {
-      id: "patient-intake",
-      title: "Patient Intake & Communication",
-      description: "Automated patient intake forms, history tracking, and clinic-to-patient communication in one unified inbox.",
+      id: "patient-communication",
+      title: "Patient Communication",
+      description: "Automated confirmations, reminders, and follow-ups reduce manual coordination between patients, doctors, and clinic staff.",
     },
     {
       id: "scheduling",
       title: "Intelligent Scheduling",
-      description: "AI-powered slot generation that respects doctor availability, appointment durations, breaks, and clinic constraints.",
+      description: "Availability-aware scheduling handles doctor calendars, slot generation, and booking constraints.",
     },
     {
       id: "clinic-dashboard",
       title: "Clinic Operations Dashboard",
-      description: "Real-time view of appointments, patient history, team activity, and clinic metrics for managing daily operations.",
+      description: "A centralized interface for managing doctors, appointments, patients, schedules, and operational activity.",
     },
   ],
 
   problem: {
-    statement: "Clinics waste hours on manual scheduling, fragmented communication across SMS/calls/WhatsApp, and repetitive data entry.",
-    context: "Doctors spend more time managing workflows than caring for patients. Patient information is scattered across multiple tools, leading to scheduling conflicts, missed appointments, and poor continuity of care.",
-    opportunity: "A unified platform that handles patient communication, scheduling, and clinic operations in a single trusted tool.",
+    statement: "Why waste half a day for a 15-minute appointment?",
+    context: "Patients often have to call clinics, wait for responses, or coordinate availability manually just to book a short appointment.\n\nClinics deal with the other side of the same problem: calls, WhatsApp messages, spreadsheets, and repetitive coordination.\n\nQuickCliniq turns WhatsApp into the booking layer, allowing patients to find availability and book appointments while giving clinic staff a centralized way to manage the operation.",
+    opportunity: "",
   },
 
   workflow: {
     title: "How It Works",
     steps: [
-      { step: 1, label: "Patient initiates", description: "Patient messages clinic WhatsApp number" },
-      { step: 2, label: "Clinic receives", description: "QuickCliniq processes request in unified inbox" },
-      { step: 3, label: "AI handles logic", description: "Intelligent scheduling checks availability and constraints" },
-      { step: 4, label: "Confirmation sent", description: "Patient receives appointment confirmation with details" },
-      { step: 5, label: "Dashboard updates", description: "Clinic sees new appointment in real-time dashboard" },
+      { step: 1, label: "Patient starts conversation", description: "The patient interacts with the clinic through WhatsApp." },
+      { step: 2, label: "Appointment intent is captured", description: "The system identifies the requested doctor, service, date, or appointment need." },
+      { step: 3, label: "Availability is checked", description: "Scheduling logic evaluates doctor availability and generated slots." },
+      { step: 4, label: "Appointment is created", description: "The selected slot is persisted and the patient receives confirmation." },
+      { step: 5, label: "Automated reminders", description: "The system sends scheduled appointment reminders and follow-ups." },
+      { step: 6, label: "Clinic sees everything", description: "Staff manage appointments, doctors, patients, and schedules through the dashboard." },
     ],
   },
 
