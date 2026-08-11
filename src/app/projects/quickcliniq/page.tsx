@@ -13,7 +13,7 @@ export default function QuickCliniqCaseStudy() {
   const nextProject = getProject("hiresense");
 
   return (
-    <main className="pt-16">
+    <main className="pt-20 md:pt-16">
       {/* ===== HERO ===== */}
       <section className="container pb-16 md:pb-20">
         <div className="space-y-6">

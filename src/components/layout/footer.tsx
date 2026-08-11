@@ -27,7 +27,7 @@ export function Footer() {
           </nav>
         </div>
         <div className="border-t border-outline-variant/20 pt-8">
-          <p className="font-mono text-xs text-text-muted">© {new Date().getFullYear()} Sriharsha Gade. AI Engineer bridging business and engineering.</p>
+          <p className="font-mono text-xs text-on-surface">© {new Date().getFullYear()} Sriharsha Gade. AI Engineer bridging business and engineering.</p>
         </div>
       </div>
     </footer>

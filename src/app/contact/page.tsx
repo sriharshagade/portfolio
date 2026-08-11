@@ -44,7 +44,7 @@ export default function ContactPage() {
           </section>
           <section className="border-b border-outline-variant/30 pb-8">
             <p className="mb-4"><LabelTag>Socials</LabelTag></p>
-            <div className="flex flex-wrap gap-4 md:gap-6">
+            <div className="flex flex-nowrap gap-3 md:gap-4 overflow-x-auto">
               {socials.map((item) => {
                 if (!item.icon) return null;
                 const Icon = item.icon;

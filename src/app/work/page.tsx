@@ -64,7 +64,6 @@ export default function WorkPage() {
       {/* Header */}
       <div className={`mb-16 ${SPACING.hierarchy.majorBreak}`}>
         <div className="space-y-4">
-          <div className="font-mono text-label-mono text-primary">PRIMARY EXPERIENCE</div>
           <div className="space-y-2">
             <h1 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl">
               AI/ML Engineer
@@ -112,8 +111,7 @@ export default function WorkPage() {
       </div>
 
       {/* Prior Experience Section */}
-      <section className="mt-12 md:mt-24 pt-8 md:pt-16 border-t border-outline-variant/30">
-        <div className="font-mono text-label-mono text-primary mb-6">PRIOR EXPERIENCE</div>
+      <section className="pt-8 md:pt-16 border-t border-outline-variant/30">
         <div className="max-w-3xl space-y-6">
           <div className="space-y-2">
             <h2 className="font-geist text-headline-md text-on-background-emphasis">

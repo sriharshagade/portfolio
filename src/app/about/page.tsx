@@ -30,7 +30,7 @@ export default function AboutPage() {
             </div>
             <div className="md:col-span-5 flex items-start">
               <div className="group relative aspect-[3/4] w-full max-h-[600px] md:max-h-none overflow-hidden rounded-lg border border-outline-variant/50 bg-surface-container">
-                <Image alt="Sriharsha Gade portrait" className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0" fill sizes="(min-width: 1024px) 34vw, 100vw" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmxjUW0qqhhtU7ITppe5YzM6RbK_igeUsRpxqZvi4KFdmFtlqhS0p7PLtDOEGYswKb3SLxhS1wjbzPY2eFJW_MUUVl_UGrmGnWPZVoEEDrzjaNmcI7VQBGNOZHV2nrFAio9o10bpX5cmnGqpG4sQjUoBmzpgmp9oB0JaXW02kuToxfKSwvNqoj5vslrqtMeUyOTh8IIDK57P-WyM_6oV8pRYJHBBs30BVOAAchMcYIkp4KzDUZgq2JoTwpuf80T9NLbGKem9DuShvQG-M" />
+                <Image alt="Sriharsha Gade, AI engineer based in Bengaluru" className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0" fill sizes="(min-width: 1024px) 34vw, 100vw" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmxjUW0qqhhtU7ITppe5YzM6RbK_igeUsRpxqZvi4KFdmFtlqhS0p7PLtDOEGYswKb3SLxhS1wjbzPY2eFJW_MUUVl_UGrmGnWPZVoEEDrzjaNmcI7VQBGNOZHV2nrFAio9o10bpX5cmnGqpG4sQjUoBmzpgmp9oB0JaXW02kuToxfKSwvNqoj5vslrqtMeUyOTh8IIDK57P-WyM_6oV8pRYJHBBs30BVOAAchMcYIkp4KzDUZgq2JoTwpuf80T9NLbGKem9DuShvQG-M" placeholder="blur" blurDataURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect fill='%23162033' width='300' height='400'/%3E%3C/svg%3E" />
                 <span className="absolute bottom-4 right-4 rounded border border-outline-variant bg-surface/90 px-3 py-1 font-mono text-xs text-primary backdrop-blur">IMG_01</span>
               </div>
             </div>

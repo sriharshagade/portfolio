@@ -29,7 +29,7 @@ export function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 z-50 w-full border-t border-b border-outline-variant/30 bg-surface/80 backdrop-blur-xl pt-2 md:pt-3">
+    <header className="fixed top-0 z-50 w-full border-t border-b border-outline-variant/30 bg-surface/80 supports-[backdrop-filter]:backdrop-blur-xl pt-2 md:pt-3" style={{ backgroundColor: 'rgba(22, 32, 51, 0.95)' }}>
       <div className="container flex h-16 items-center justify-between">
         <Link className="font-geist text-logo text-on-surface" href="/">
           SRIHARSHA GADE
@@ -39,7 +39,7 @@ export function Navbar() {
             const active = isActive(item.href);
             return (
               <Link
-                className={`focus-ring text-body-md transition-colors border-b-2 pb-1 ${
+                className={`text-body-md transition-colors border-b-2 pb-1 outline-offset-2 focus:outline-2 focus:outline-primary ${
                   active
                     ? "text-primary border-primary"
                     : "text-on-surface-variant border-transparent hover:text-primary"
@@ -71,7 +71,7 @@ export function Navbar() {
               const active = isActive(item.href);
               return (
                 <Link
-                  className={`focus-ring rounded-md px-3 py-2 text-body-md transition-colors ${
+                  className={`rounded-md px-3 py-2 text-body-md transition-colors outline-offset-2 focus:outline-2 focus:outline-primary ${
                     active
                       ? "bg-surface-variant text-primary"
                       : "text-on-surface-variant hover:bg-surface-variant hover:text-primary"
@@ -85,7 +85,7 @@ export function Navbar() {
               );
             })}
             <Link
-              className="focus-ring rounded-md px-3 py-2 text-body-md text-on-surface-variant transition-colors hover:bg-surface-variant hover:text-primary"
+              className="rounded-md px-3 py-2 text-body-md text-on-surface-variant transition-colors outline-offset-2 focus:outline-2 focus:outline-primary hover:bg-surface-variant hover:text-primary"
               href="/contact"
               onClick={closeMenu}
             >

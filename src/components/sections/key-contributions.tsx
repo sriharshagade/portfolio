@@ -42,7 +42,7 @@ export function KeyContributions({ contributions }: { contributions: Contributio
                 </span>
                 <ChevronDown
                   aria-hidden="true"
-                  className={`mt-1 size-4 shrink-0 text-on-surface-variant transition-transform ${isOpen ? "rotate-180" : ""}`}
+                  className={`mt-1 size-4 shrink-0 text-on-surface-variant transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? "rotate-180" : ""}`}
                 />
               </button>
               {isOpen && (

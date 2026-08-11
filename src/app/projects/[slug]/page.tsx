@@ -36,7 +36,7 @@ export default async function ProjectCaseStudyPage({ params }: ProjectPageProps)
   const metadata = project.metadata || { role: [], scope: "" };
 
   return (
-    <main className="pt-16">
+    <main className="pt-20 md:pt-16">
       {/* Hero Section */}
       <section className="container py-16 md:py-24">
         <div className="space-y-8">

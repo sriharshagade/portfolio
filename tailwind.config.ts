@@ -67,6 +67,11 @@ const config: Config = {
         "section-bottom-desktop": "160px",
         gutter: "24px",
       },
+      opacity: {
+        15: "0.15",
+        30: "0.30",
+        60: "0.60",
+      },
     },
   },
   plugins: [tailwindcssAnimate],

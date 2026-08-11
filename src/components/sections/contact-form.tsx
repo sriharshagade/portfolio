@@ -64,7 +64,7 @@ function Field({
 }) {
   return (
     <div className="space-y-1">
-      <label className="font-mono text-xs uppercase tracking-wider text-text-muted" htmlFor={id}>
+      <label className="font-mono text-xs uppercase tracking-wider text-on-surface" htmlFor={id}>
         {label}
       </label>
       <input
