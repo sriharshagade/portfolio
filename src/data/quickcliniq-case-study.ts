@@ -31,7 +31,7 @@ export const quickcliniqCaseStudy = {
     {
       id: "patient-communication",
       title: "Patient Communication",
-      description: "Automated confirmations, reminders, and follow-ups reduce manual coordination between patients, doctors, and clinic staff.",
+      description: "Automated confirmations, reminders, and follow-ups designed to reduce manual coordination between patients, doctors, and clinic staff.",
     },
     {
       id: "scheduling",
@@ -109,7 +109,7 @@ export const quickcliniqCaseStudy = {
     {
       title: "WhatsApp as the primary UI, not a secondary channel",
       rationale: "Patients already use WhatsApp. Doctors already use WhatsApp for clinic communication. Building WhatsApp as a first-class experience rather than a bolted-on feature meant treating message flows with the same care as dashboard UI.",
-      impact: "Built as a first-class experience rather than a bolted-on feature. Made the product reflect how clinics actually work.",
+      impact: "Built as a first-class experience rather than a bolted-on feature. Designed to match how clinics actually work.",
     },
     {
       title: "AI for scheduling logic, not just conversation",

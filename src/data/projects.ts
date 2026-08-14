@@ -4,7 +4,7 @@ export type Project = {
   slug: string;
   name: string;
   category: string;
-  status: "Active" | "Beta" | "Production" | "Archived";
+  status: "Active" | "Beta" | "Production" | "Archived" | "Personal Project · Proof of Concept";
   headline: string;
   summary: string;
   image: string;
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     slug: "quickcliniq",
     name: "QuickCliniq",
     category: "Healthcare AI Workflow",
-    status: "Production",
+    status: "Personal Project · Proof of Concept",
     headline: "A WhatsApp-first clinic management platform for patient intake, scheduling, and clinical operations.",
     summary: "Healthcare clinics lose valuable time to manual scheduling, fragmented patient communication, and administrative overhead. QuickCliniq helps clinics streamline daily operations so doctors can spend more time caring for patients and less time managing workflows.",
     image: "/quickcliniq_hero.png",

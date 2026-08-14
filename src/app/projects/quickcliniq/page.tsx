@@ -59,7 +59,7 @@ export default function QuickCliniqCaseStudy() {
         <div className="space-y-8">
           <div className="space-y-2">
             <h2 className="font-geist text-headline-md text-on-background-emphasis">What I Built</h2>
-            <p className="text-body-md text-on-surface-variant">A production clinic operations platform connecting WhatsApp patient communication with scheduling and clinic workflows.</p>
+            <p className="text-body-md text-on-surface-variant">A clinic operations platform connecting WhatsApp patient communication with scheduling and clinic workflows.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -205,7 +205,7 @@ export default function QuickCliniqCaseStudy() {
         <div className="space-y-8">
           <div className="space-y-2">
             <h2 className="font-geist text-headline-md text-on-background-emphasis">Key Learnings</h2>
-            <p className="text-body-md text-on-surface-variant">Core insights from building a production AI-powered clinic platform.</p>
+            <p className="text-body-md text-on-surface-variant">Core insights from building a clinic platform.</p>
           </div>
 
           <ul className="space-y-3">
