@@ -32,7 +32,7 @@ export default function QuickCliniqCaseStudy() {
               {quickcliniqCaseStudy.demoUrl && (
                 <Button asChild variant="primary" className="md:flex-shrink-0">
                   <a href={quickcliniqCaseStudy.demoUrl} target="_blank" rel="noopener noreferrer">
-                    View Working Demo
+                    View Demo
                   </a>
                 </Button>
               )}

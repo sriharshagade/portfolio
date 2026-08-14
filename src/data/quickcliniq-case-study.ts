@@ -2,7 +2,7 @@ export const quickcliniqCaseStudy = {
   name: "QuickCliniq",
   tagline: "WhatsApp-first clinic management for patient intake, scheduling, and operations.",
   category: "Healthcare AI Workflow",
-  status: "Fully Built · Pre-Launch" as const,
+  status: "Personal Project · Proof of Concept" as const,
   image: "/quickcliniq_hero.png",
   imageAlt: "QuickCliniq dashboard interface showing appointment management and clinical workflow.",
   demoUrl: "https://quickcliniq.com/",
@@ -104,12 +104,12 @@ export const quickcliniqCaseStudy = {
     {
       title: "Multi-clinic data isolation from day one",
       rationale: "Expected to scale across multiple clinic networks. Built field-level row-level security and data filtering into the database schema and API layer from the start rather than retrofitting it later.",
-      impact: "Enabled rapid onboarding of new clinic groups without architectural changes. Prevented data leaks between clinics in production.",
+      impact: "Built to support onboarding of new clinic groups; validated with 2 proof-of-concept clinics. Designed to prevent data leaks between clinics.",
     },
     {
       title: "WhatsApp as the primary UI, not a secondary channel",
       rationale: "Patients already use WhatsApp. Doctors already use WhatsApp for clinic communication. Building WhatsApp as a first-class experience rather than a bolted-on feature meant treating message flows with the same care as dashboard UI.",
-      impact: "Significantly higher user engagement. Reduced friction for adoption. Made the product feel native to how clinics actually work.",
+      impact: "Built as a first-class experience rather than a bolted-on feature. Made the product reflect how clinics actually work.",
     },
     {
       title: "AI for scheduling logic, not just conversation",
@@ -124,7 +124,7 @@ export const quickcliniqCaseStudy = {
     {
       title: "PostgreSQL with careful schema design",
       rationale: "Clinics need auditable records (appointment history, change logs, cancellations). Patient data is sensitive (PII, health records). Built strong schema constraints, cascading deletes, and audit logging into the database rather than relying on application logic.",
-      impact: "Operational safety. Compliance-ready data structure. Easier to debug data issues.",
+      impact: "Structured with auditability and safety in mind. Easier to debug data issues.",
     },
   ],
 
@@ -150,7 +150,7 @@ export const quickcliniqCaseStudy = {
   ],
 
   learnings: [
-    "Product-market fit comes from solving the actual workflow, not adding features. Clinics wanted a single inbox, not another dashboard.",
+    "I believe workflow fit matters more than feature count — a single inbox for clinics beats another dashboard.",
     "AI features are only useful when the deterministic logic is solid. The LLM handles parsing; the scheduling algorithm handles correctness.",
     "Multi-tenant systems are not optional. Built data isolation from day one rather than retrofitting it.",
     "Observability matters more than you think. Debugging WhatsApp integrations and scheduling issues required detailed logging and monitoring.",
