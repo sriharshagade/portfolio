@@ -24,7 +24,7 @@ export default function ContactPage() {
         <section className="md:col-span-7">
           <div className="mb-12">
             <PageHeader
-              title="Let&apos;s build something meaningful."
+              title="Let&apos;s talk."
               description="Whether you&apos;re hiring an AI engineer, looking for a product builder, or want to discuss an idea, I&apos;d love to hear from you."
               descriptionSize="lg"
             />

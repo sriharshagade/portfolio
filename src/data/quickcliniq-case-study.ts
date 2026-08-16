@@ -2,7 +2,7 @@ export const quickcliniqCaseStudy = {
   name: "QuickCliniq",
   tagline: "WhatsApp-first clinic management for patient intake, scheduling, and operations.",
   category: "Healthcare AI Workflow",
-  status: "Personal Project · Proof of Concept" as const,
+  status: "Personal Project" as const,
   image: "/quickcliniq_hero.png",
   imageAlt: "QuickCliniq dashboard interface showing appointment management and clinical workflow.",
   demoUrl: "https://quickcliniq.com/",

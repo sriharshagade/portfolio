@@ -60,7 +60,7 @@ export default function WorkPage() {
   ];
 
   return (
-    <main className="container pt-16 pb-32 md:pb-40">
+    <main className="container pb-32 md:pb-40">
       {/* Header */}
       <div className={`mb-16 ${SPACING.hierarchy.majorBreak}`}>
         <div className="space-y-4">
@@ -111,7 +111,7 @@ export default function WorkPage() {
       </div>
 
       {/* Prior Experience Section */}
-      <section className="pt-8 md:pt-16 border-t border-outline-variant/30">
+      <section className="container py-12 md:py-16 border-t border-outline-variant/30">
         <div className="max-w-3xl space-y-6">
           <div className="space-y-2">
             <h2 className="font-geist text-headline-md text-on-background-emphasis">

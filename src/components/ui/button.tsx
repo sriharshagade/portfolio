@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: "bg-primary text-on-primary hover:bg-primary/90",
-        secondary: "border border-on-surface text-on-surface hover:bg-on-surface hover:border-surface hover:text-surface",
+        secondary: "border-2 border-on-surface text-on-surface hover:bg-on-surface hover:border-surface hover:text-surface",
         tertiary: "h-auto px-0 gap-1.5 justify-start text-primary hover:text-on-background-emphasis",
       },
       size: { default: "h-10 px-6", lg: "h-12 px-8", icon: "size-10 px-0" },

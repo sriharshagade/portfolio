@@ -2,8 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { CaseStudyHero } from "@/components/sections/case-study-hero";
 import { quickcliniqCaseStudy } from "@/data/quickcliniq-case-study";
 import { getProject } from "@/data/projects";
 
@@ -13,44 +12,29 @@ export default function QuickCliniqCaseStudy() {
   const nextProject = getProject("hiresense");
 
   return (
-    <main className="pt-20 md:pt-16">
-      {/* ===== HERO ===== */}
-      <section className="container pb-16 md:pb-20">
-        <div className="space-y-6">
-          <div className="space-y-3">
-            <p className="font-mono text-label-mono text-primary">{quickcliniqCaseStudy.category}</p>
-            <div className="flex items-start justify-between gap-4">
-              <h1 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl flex-1">
-                {quickcliniqCaseStudy.name}
-              </h1>
-              <div className="flex-shrink-0">
-                <Badge variant="status" className="bg-surface-container-high text-on-surface-variant">{quickcliniqCaseStudy.status}</Badge>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6">
-              <p className="text-body-lg text-on-surface-variant max-w-2xl">{quickcliniqCaseStudy.tagline}</p>
-              {quickcliniqCaseStudy.demoUrl && (
-                <Button asChild variant="primary" className="md:flex-shrink-0">
-                  <a href={quickcliniqCaseStudy.demoUrl} target="_blank" rel="noopener noreferrer">
-                    View Demo
-                  </a>
-                </Button>
-              )}
-            </div>
-          </div>
+    <main>
+      {/* ===== HERO (GLOBAL CASE STUDY PROTOCOL) ===== */}
+      <CaseStudyHero
+        category={quickcliniqCaseStudy.category}
+        projectName={quickcliniqCaseStudy.name}
+        badge={quickcliniqCaseStudy.status}
+        description={quickcliniqCaseStudy.tagline}
+        demoUrl={quickcliniqCaseStudy.demoUrl}
+        demoLabel="View Demo"
+      />
 
-          {/* Hero Image */}
-          <div className="relative w-full max-w-4xl overflow-hidden rounded-lg border border-outline-variant/30 bg-surface-container mx-auto mt-6">
-            <Image
-              alt={quickcliniqCaseStudy.imageAlt}
-              className="w-full h-auto"
-              width={960}
-              height={600}
-              priority
-              sizes="(min-width: 1024px) 960px, 100vw"
-              src={quickcliniqCaseStudy.image}
-            />
-          </div>
+      {/* Hero Image */}
+      <section className="container pb-16 md:pb-20">
+        <div className="relative w-full max-w-4xl overflow-hidden rounded-lg border border-outline-variant/30 bg-surface-container mx-auto">
+          <Image
+            alt={quickcliniqCaseStudy.imageAlt}
+            className="w-full h-auto"
+            width={960}
+            height={600}
+            priority
+            sizes="(min-width: 1024px) 960px, 100vw"
+            src={quickcliniqCaseStudy.image}
+          />
         </div>
       </section>
 

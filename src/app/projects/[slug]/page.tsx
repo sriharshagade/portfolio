@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { CaseStudyHero } from "@/components/sections/case-study-hero";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getProject, projects } from "@/data/projects";
@@ -36,63 +37,68 @@ export default async function ProjectCaseStudyPage({ params }: ProjectPageProps)
   const metadata = project.metadata || { role: [], scope: "" };
 
   return (
-    <main className="pt-20 md:pt-16">
-      {/* Hero Section */}
-      <section className="container py-16 md:py-24">
-        <div className="space-y-8">
-          <div className="space-y-4">
-            <p className="font-mono text-label-mono text-primary">{project.category}</p>
-            <h1 className="font-geist text-display-xl-mobile text-on-background-emphasis md:text-display-xl">{project.name}</h1>
-            <p className="text-body-lg text-on-surface-variant max-w-3xl">{project.headline}</p>
-          </div>
+    <main>
+      {/* Hero Section (GLOBAL CASE STUDY PROTOCOL) */}
+      <CaseStudyHero
+        category={project.category}
+        projectName={project.name}
+        badge={project.status}
+        description={project.headline}
+        demoUrl={project.demoUrl}
+        demoLabel="Demo"
+      />
 
-          {/* Metadata Section */}
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 py-8 border-y border-outline-variant/30">
-            <div>
-              <p className="font-mono text-micro uppercase tracking-wider text-on-surface-variant mb-2">Role</p>
-              <p className="text-body-md text-on-background-emphasis">{metadata.role.join(" · ") || "Product Engineering"}</p>
-            </div>
-            <div>
-              <p className="font-mono text-micro uppercase tracking-wider text-on-surface-variant mb-2">Scope</p>
-              <p className="text-body-md text-on-background-emphasis">{metadata.scope || "Full Stack"}</p>
-            </div>
-            <div>
-              <p className="font-mono text-micro uppercase tracking-wider text-on-surface-variant mb-2">Status</p>
-              <div className="flex items-center gap-2">
-                <Badge variant="status">{project.status}</Badge>
-              </div>
+      {/* Metadata Section */}
+      <section className="container py-12 md:py-16 border-t border-outline-variant/30">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
+          <div>
+            <p className="font-mono text-micro uppercase tracking-wider text-on-surface-variant mb-2">Role</p>
+            <p className="text-body-md text-on-background-emphasis">{metadata.role.join(" · ") || "Product Engineering"}</p>
+          </div>
+          <div>
+            <p className="font-mono text-micro uppercase tracking-wider text-on-surface-variant mb-2">Scope</p>
+            <p className="text-body-md text-on-background-emphasis">{metadata.scope || "Full Stack"}</p>
+          </div>
+          <div>
+            <p className="font-mono text-micro uppercase tracking-wider text-on-surface-variant mb-2">Status</p>
+            <div className="flex items-center gap-2">
+              <Badge variant="status">{project.status}</Badge>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Hero Image */}
-          <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-outline-variant/30 bg-surface-container">
-            <Image
-              alt={project.imageAlt}
-              className="object-cover"
-              fill
-              priority
-              sizes="(min-width: 1024px) 960px, 100vw"
-              src={project.image}
-            />
-          </div>
+      {/* Hero Image */}
+      <section className="container py-12 md:py-16">
+        <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-outline-variant/30 bg-surface-container">
+          <Image
+            alt={project.imageAlt}
+            className="object-cover"
+            fill
+            priority
+            sizes="(min-width: 1024px) 960px, 100vw"
+            src={project.image}
+          />
+        </div>
+      </section>
 
-          {/* Action Buttons */}
-          <div className="flex flex-wrap gap-4">
-            {project.demoUrl && (
-              <Button asChild variant="primary">
-                <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                  <LinkIcon aria-hidden="true" className="size-4" />
-                  Demo
-                </a>
-              </Button>
-            )}
-            {project.showGithubLink !== false && (
-              <Button variant="secondary">
-                <Github aria-hidden="true" className="size-4" />
-                GitHub
-              </Button>
-            )}
-          </div>
+      {/* Action Buttons */}
+      <section className="container py-12 md:py-16 border-b border-outline-variant/30">
+        <div className="flex flex-wrap gap-4">
+          {project.demoUrl && (
+            <Button asChild variant="primary">
+              <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                <LinkIcon aria-hidden="true" className="size-4" />
+                Demo
+              </a>
+            </Button>
+          )}
+          {project.showGithubLink !== false && (
+            <Button variant="secondary">
+              <Github aria-hidden="true" className="size-4" />
+              GitHub
+            </Button>
+          )}
         </div>
       </section>
 
@@ -131,7 +137,7 @@ export default async function ProjectCaseStudyPage({ params }: ProjectPageProps)
       </section>
 
       {/* Next Case Study */}
-      <section className="container py-section-gap border-t border-outline-variant/30 mt-16 pt-16">
+      <section className="container py-12 md:py-16 border-t border-outline-variant/30">
         <div className="max-w-2xl">
           <p className="font-mono text-label-mono text-primary mb-8">Next Case Study</p>
           <Link
